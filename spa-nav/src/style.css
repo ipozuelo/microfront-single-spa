@@ -1,0 +1,43 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 10px;
+    align-items: flex-start;
+  }
+  
+  .logo img {
+    width: 70px; /* Ajusta el tamaño del logo según tus necesidades */
+  }
+  
+nav ul {
+    display: flex;
+    list-style: none;
+  }
+
+nav ul li{
+    margin: 15px;
+}
+
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .logo {
+      margin-bottom: 10px;
+    }
+    
+    .links {
+      flex-direction: column;
+      margin-left: 0;
+      margin-top: 10px; 
+    }
+    
+ 
+  }

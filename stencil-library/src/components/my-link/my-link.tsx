@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'my-link',
@@ -7,10 +7,13 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class MyLink {
 
+  @Prop() link:string = ""
+  @Prop() text:string = ""
+
   render() {
     return (
       <Host>
-        <slot></slot>
+        <a href={this.link}>{this.text}</a>
       </Host>
     );
   }

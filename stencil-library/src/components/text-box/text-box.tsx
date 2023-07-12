@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'text-box',
@@ -7,10 +7,14 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class TextBox {
 
+  @Prop() text:string=""
+
   render() {
     return (
       <Host>
-        <slot></slot>
+        <div class="caja">
+          <p class="texto">{this.text}</p>
+        </div>
       </Host>
     );
   }

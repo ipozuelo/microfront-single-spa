@@ -1,3 +1,9 @@
+@import url('../../../../tokens/variables.css');
+
 :host {
   display: block;
+}
+
+button {
+  background-color: var(--global-red);
 }

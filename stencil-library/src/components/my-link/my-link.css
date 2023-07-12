@@ -1,3 +1,18 @@
 :host {
   display: block;
 }
+
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #0d8af1;
+}

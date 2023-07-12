@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
   <% if (isLocal) { %>
   <script type="systemjs-importmap" src="/importmap.json"></script> 
   <% } %>
-  <script type="module"  src='https://cdn.jsdelivr.net/npm/stencil-library-web@0.0.2/dist/stencil-library/stencil-library.esm.js'></script>
+  <script type="module"  src='https://cdn.jsdelivr.net/npm/stencil-library-web@0.0.3/dist/stencil-library/stencil-library.esm.js'></script>
 
 
   <script type="module" src='https://cdn.jsdelivr.net/npm/stencil-library-microfront-p1@0.0.1/loader/index.js'></script>
@@ -38,6 +38,11 @@
   <% } %>
 
 </head>
+<style>
+  body{
+    background-color: rgb(220, 218, 218);
+  }
+</style>
 <body>
   <noscript>
     You need to enable JavaScript to run this app.

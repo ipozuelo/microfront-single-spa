@@ -27,6 +27,13 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyLink {
+        "link": string;
+        "text": string;
+    }
+    interface TextBox {
+        "text": string;
+    }
 }
 declare global {
     interface HTMLMyBtnElement extends Components.MyBtn, HTMLStencilElement {
@@ -47,10 +54,24 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLMyLinkElement extends Components.MyLink, HTMLStencilElement {
+    }
+    var HTMLMyLinkElement: {
+        prototype: HTMLMyLinkElement;
+        new (): HTMLMyLinkElement;
+    };
+    interface HTMLTextBoxElement extends Components.TextBox, HTMLStencilElement {
+    }
+    var HTMLTextBoxElement: {
+        prototype: HTMLTextBoxElement;
+        new (): HTMLTextBoxElement;
+    };
     interface HTMLElementTagNameMap {
         "my-btn": HTMLMyBtnElement;
         "my-card": HTMLMyCardElement;
         "my-component": HTMLMyComponentElement;
+        "my-link": HTMLMyLinkElement;
+        "text-box": HTMLTextBoxElement;
     }
 }
 declare namespace LocalJSX {
@@ -75,10 +96,19 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MyLink {
+        "link"?: string;
+        "text"?: string;
+    }
+    interface TextBox {
+        "text"?: string;
+    }
     interface IntrinsicElements {
         "my-btn": MyBtn;
         "my-card": MyCard;
         "my-component": MyComponent;
+        "my-link": MyLink;
+        "text-box": TextBox;
     }
 }
 export { LocalJSX as JSX };
@@ -88,6 +118,8 @@ declare module "@stencil/core" {
             "my-btn": LocalJSX.MyBtn & JSXBase.HTMLAttributes<HTMLMyBtnElement>;
             "my-card": LocalJSX.MyCard & JSXBase.HTMLAttributes<HTMLMyCardElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-link": LocalJSX.MyLink & JSXBase.HTMLAttributes<HTMLMyLinkElement>;
+            "text-box": LocalJSX.TextBox & JSXBase.HTMLAttributes<HTMLTextBoxElement>;
         }
     }
 }
