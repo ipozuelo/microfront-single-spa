@@ -22,30 +22,24 @@
     <route default>
       <application name="@spa-nav/react"></application>
       <application name="@spa-home/angular"></application>
-      <application name="@spa-footer/vue"></application>
     </route>
 
     <route path="home">
+      <application name="@spa-nav/react"></application>
       <application name="@spa-home/angular"></application>
     </route>
 
-    <route path="films">
+    <route path="about">
       <application name="@spa-nav/react"></application>
-      <application name="@spa-films/angular"></application>
-      <application name="@spa-footer/vue"></application>
+      <application name="@spa-about/vue"></application>
     </route>
 
-    <route path="login">
+    
+    <route path="web">
       <application name="@spa-nav/react"></application>
-      <application name="@spa-login/react"></application>
-      <application name="@spa-footer/vue"></application>
+      <application name="@spa-web/angular"></application>
     </route>
 
-    <route path="actor">
-      <application name="@spa-nav/react"></application>
-      <application name="@spa-actor/react"></application>
-      <application name="@spa-footer/vue"></application>
-    </route>
 
   </main>
 </single-spa-router>

@@ -1,0 +1,13 @@
+{
+    "nav":{
+        "home":"Home",
+        "information":"Information",
+        "team":"Team",
+        "web":"Web",
+        "stencil":"Stencil js"
+    },
+    "home":{
+        "hello":"hello"
+    }
+
+}

@@ -3,12 +3,8 @@
       "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
       "@spa-root/root-config": "//localhost:9000/spa-root-root-config.js",
       "@spa-nav/react":"http://localhost:8080/spa-nav-spa-nav.js",
-      "@spa-footer/vue":"http://localhost:8081/js/app.js",
-      "@spa-login/react":"http://localhost:8082/spa-login-spa-login.js",
       "@spa-home/angular":"http://localhost:9001/main.js",
-      "@spa-films/angular":"http://localhost:9002/main.js",
-      "@spa-actor/react":"http://localhost:8083/spa-actor-spa-actor.js"
-
-
+      "@spa-web/angular":"http://localhost:9002/main.js",
+      "@spa-about/vue":"http://localhost:8081/js/app.js"
     }
   }

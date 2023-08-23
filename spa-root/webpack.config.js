@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 
 module.exports = (webpackConfigEnv, argv) => {
+  
   const orgName = "spa-root";
   const defaultConfig = singleSpaDefaults({
     orgName,

@@ -1,0 +1,9 @@
+{
+    "home":{
+        "tittle":"Welcome to our website created with Single SPA Microfrontends technology!",
+        "init":"In this innovative website, we have adopted the microfrontends architecture using Single SPA to provide you with a modern and seamless web experience.",
+        "box":"Have you ever wondered how different standalone applications can come together to form a cohesive and collaborative website? Well, that's exactly what we have achieved here. Our focus on microfrontends allows us to develop, deploy, and maintain each part of the application independently, providing us with greater flexibility and ease of development. Each microfrontend is a small independent application that can be written in different frameworks or technologies, and yet, they all work seamlessly together on this website.",
+        "final":"With Single SPA, we have achieved seamless navigation between different sections of the site, without having to wait for a completely new page to load. Additionally, this means that when we make improvements or updates to one part of the application, it will not negatively affect other parts, resulting in a more robust and easy-to-maintain site."
+    }
+   
+}

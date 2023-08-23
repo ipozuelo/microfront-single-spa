@@ -1,0 +1,12 @@
+{
+    "nav":{
+        "home":"Inicio",
+        "information":"Información",
+        "team":"Equipo",
+        "web":"Web",
+        "stencil":"Stencil js"
+    },
+    "home":{
+        "hello":"hola"
+    }
+}

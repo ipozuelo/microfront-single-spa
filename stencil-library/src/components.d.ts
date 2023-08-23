@@ -6,6 +6,11 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface LiNav {
+        "icon": string;
+        "link": string;
+        "text": string;
+    }
     interface MyBtn {
         "text": string;
     }
@@ -36,6 +41,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLLiNavElement extends Components.LiNav, HTMLStencilElement {
+    }
+    var HTMLLiNavElement: {
+        prototype: HTMLLiNavElement;
+        new (): HTMLLiNavElement;
+    };
     interface HTMLMyBtnElement extends Components.MyBtn, HTMLStencilElement {
     }
     var HTMLMyBtnElement: {
@@ -67,6 +78,7 @@ declare global {
         new (): HTMLTextBoxElement;
     };
     interface HTMLElementTagNameMap {
+        "li-nav": HTMLLiNavElement;
         "my-btn": HTMLMyBtnElement;
         "my-card": HTMLMyCardElement;
         "my-component": HTMLMyComponentElement;
@@ -75,6 +87,11 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface LiNav {
+        "icon"?: string;
+        "link"?: string;
+        "text"?: string;
+    }
     interface MyBtn {
         "text"?: string;
     }
@@ -104,6 +121,7 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface IntrinsicElements {
+        "li-nav": LiNav;
         "my-btn": MyBtn;
         "my-card": MyCard;
         "my-component": MyComponent;
@@ -115,6 +133,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "li-nav": LocalJSX.LiNav & JSXBase.HTMLAttributes<HTMLLiNavElement>;
             "my-btn": LocalJSX.MyBtn & JSXBase.HTMLAttributes<HTMLMyBtnElement>;
             "my-card": LocalJSX.MyCard & JSXBase.HTMLAttributes<HTMLMyCardElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
