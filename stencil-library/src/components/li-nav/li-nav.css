@@ -1,17 +1,12 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 :host {
   display: block;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  color: #ffffff;
-}
-
-
-a:hover {
-  color: rgb(76, 76, 233);
-  background-color: #ffffff;
-  border-radius: 5px;
+  color: var(--text-color-nav);
 }
 
 .nav-item{
@@ -21,10 +16,18 @@ a:hover {
 
 .nav-item i {
   margin-right: 10px;
+  
 }
 
 a{
   text-decoration: none;
-  color: white;
+  color: var(--text-color-nav);
 }
 
+a:hover {
+  color: var(--hover-color-text-a);
+  background-color: var(--hover-color-background-a);
+  border-radius: var(--border-radius-btn);
+  padding-right: 5px;
+  padding-left: 5px;
+}

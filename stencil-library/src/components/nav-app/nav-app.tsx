@@ -9,9 +9,9 @@ import { getLocaleComponentStrings } from '../../utils/locale';
 })
 export class NavApp {
   @Prop() itemList: NavItems[] = [
-    { text: 'home', icon: 'bx bx-home', link: '/' },
-    { text: 'about', icon: 'bx bx-info-circle', link: '/about' },
-    { text: 'stencil', icon: 'bx bx-info-circle', link: '/stencil' },
+    { text: 'home', icon: 'fa-solid fa-house', link: '/' },
+    { text: 'about', icon: 'fa-solid fa-circle-info', link: '/about' },
+    { text: 'stencil', icon: 'fa-solid fa-house', link: '/stencil' },
   ];
   @Prop() tittle: string = '';
   @Prop() lg: string = 'es';

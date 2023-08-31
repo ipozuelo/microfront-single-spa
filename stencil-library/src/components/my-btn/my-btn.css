@@ -6,6 +6,6 @@
 }
 
 button{
-  border-radius: 5px;
+  border-radius: var(--border-radius-btn);
   padding: 5px 10px;
 }

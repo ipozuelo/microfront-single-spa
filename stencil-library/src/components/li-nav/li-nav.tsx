@@ -7,7 +7,7 @@ import { getLocaleComponentStrings } from '../../utils/locale';
   styleUrl: 'li-nav.css',
   shadow: true,
 })
-export class LiNav {
+export class LiNav  {
   @Prop() text: string = '';
   @Prop() link: string = '';
   @Prop() icon: string = '';
@@ -20,12 +20,14 @@ export class LiNav {
   }
 
   render() {
+
+   
     return (
       <Host>
-        <li class="nav-item">
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"></link>
-        <i class={this.icon}></i>
-          <a href={this.link}>
+        <li >
+     
+          <a href={this.link} class="nav-item">
+          <i class={this.icon}></i>
             <p>{this.strings[this.text]}</p>
           </a>
 

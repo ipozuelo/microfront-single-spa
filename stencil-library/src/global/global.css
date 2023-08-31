@@ -5,5 +5,10 @@
     --btn-color-languaje: var(--general-nav-btn-color);
     --btn-color-btn-nav: var(--general-nav-btn-color);
     --border-radius-btn: var(--general-nav-btn-border-radius);
+    --icon-house: var( --general-icon-ui-house);
+    --background-color-nav: var(--general-nav-menu-color);
+    --hover-color-text-a: var(--general-nav-btn-hover);
+    --hover-color-background-a: var(--general-nav-hover-a);
+    --text-color-nav: var(--general-nav-text-color);
 }
 
