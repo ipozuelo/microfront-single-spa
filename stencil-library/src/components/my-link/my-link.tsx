@@ -1,4 +1,6 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop, Element } from '@stencil/core';
+import { getLocaleComponentStrings } from '../../utils/locale';
+
 
 @Component({
   tag: 'my-link',
@@ -9,11 +11,17 @@ export class MyLink {
 
   @Prop() link:string = ""
   @Prop() text:string = ""
+  @Prop() lg: string = 'es';
+  @Element() element: HTMLElement;
+  strings: { [key: string]: string } = {};
+  async componentWillLoad() {
+    this.strings = await getLocaleComponentStrings(this.element, this.lg);
+  }
 
   render() {
     return (
       <Host>
-        <a href={this.link}>{this.text}</a>
+        <a href={this.link} target='blanck'>{this.strings[this.text]}</a>
       </Host>
     );
   }

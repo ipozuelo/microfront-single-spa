@@ -2,8 +2,7 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'stencil-library',
-  
-  
+  globalStyle: 'src/global/global.css',
   outputTargets: [
     {
       type: 'dist',
@@ -18,12 +17,10 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, 
-      copy: [
-        {
-            src: './assets/i18n/*.json',
-            dest: 'assets/i18n'
-        }
-    ],// disable service workers
+      copy: [{
+        src: "**/*.i18n.*.json",
+        dest: "assets/i18n"
+      }]
     },
     
     

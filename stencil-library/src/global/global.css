@@ -1,0 +1,9 @@
+@import "../../../tokens/variables.css";
+
+
+:root{
+    --btn-color-languaje: var(--general-nav-btn-color);
+    --btn-color-btn-nav: var(--general-nav-btn-color);
+    --border-radius-btn: var(--general-nav-btn-border-radius);
+}
+

@@ -1,3 +1,19 @@
 {
-    "source":"[../tokens/token.json]"
-}
+    "source": ["token.json"],
+    "platforms": {
+      "scss": {
+        "transformGroup": "scss",
+        "prefix": "sd",
+        "buildPath": "./",
+        "files": [{
+          "destination": "_variables.scss",
+          "format": "scss/variables",
+          "filter": {
+            "type": "value",
+            "matcher": "general"
+          }
+        }]
+      }
+    }
+  }
+  

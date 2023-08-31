@@ -6,10 +6,9 @@ const StyleDictionary = require('style-dictionary').extend({
         buildPath: '../tokens/',
         files: [{
           destination: 'variables.css',
-          format: 'css/variables'
+          format: 'css/variables',
         }]
       }
-      // ...
     }
   });
   

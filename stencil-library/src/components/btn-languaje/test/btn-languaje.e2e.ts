@@ -1,11 +1,11 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('my-card', () => {
+describe('btn-languaje', () => {
   it('renders', async () => {
     const page = await newE2EPage();
-    await page.setContent('<my-card></my-card>');
+    await page.setContent('<btn-languaje></btn-languaje>');
 
-    const element = await page.find('my-card');
+    const element = await page.find('btn-languaje');
     expect(element).toHaveClass('hydrated');
   });
 });

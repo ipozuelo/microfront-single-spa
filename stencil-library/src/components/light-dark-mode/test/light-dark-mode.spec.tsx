@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { MyCard } from '../my-card';
+import { LightDarkMode } from '../light-dark-mode';
 
-describe('my-card', () => {
+describe('light-dark-mode', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [MyCard],
-      html: `<my-card></my-card>`,
+      components: [LightDarkMode],
+      html: `<light-dark-mode></light-dark-mode>`,
     });
     expect(page.root).toEqualHtml(`
-      <my-card>
+      <light-dark-mode>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </my-card>
+      </light-dark-mode>
     `);
   });
 });

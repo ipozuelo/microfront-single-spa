@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="es">
   <head>
     <meta charset="utf-8" />
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
-
+    <link rel="stylesheet" href="/build/stencil-library.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"></link>
     <script type="module" src="/build/stencil-library.esm.js"></script>
     <script nomodule src="/build/stencil-library.js"></script>
   </head>
+  <style>
+    .container{
+      margin-left: 270px;
+    }
+  </style>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-    <my-btn></my-btn>
-    <my-card name="Israel"></my-card>
-    <text-box></text-box>
+
+    <nav-app tittle = "NTT-DATA Frontend"></nav-app>
+
+    <div class="container">
+    <text-box text="home_text" lg="en"></text-box>
+    <my-link text="click" link = "https://www.youtube.com/" lg="en"></my-link>
+    <my-btn text="search" lg="es"></my-btn>
+    <btn-languaje text="search" lg="es"></btn-languaje>
+    <light-dark-mode></light-dark-mode>
+    </div>
+
+   
+  
+   
+   
   </body>
-  <my-link text="link" url = "google.com"></my-link>
-  <ul>
-    <li-nav text="hello"></li-nav>
-    <li>Hola</li>
-  </ul>
  
 </html>

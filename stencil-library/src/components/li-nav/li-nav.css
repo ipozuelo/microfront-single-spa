@@ -1,3 +1,30 @@
 :host {
   display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
 }
+
+
+a:hover {
+  color: rgb(76, 76, 233);
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.nav-item{
+  display: flex;
+  align-items: center; 
+}
+
+.nav-item i {
+  margin-right: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+

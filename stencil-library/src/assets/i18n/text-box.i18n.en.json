@@ -1,0 +1,3 @@
+{
+    "home_text":"Have you ever wondered how different standalone applications can come together to form a coherent and collaborative website? Well, that's exactly what we've achieved here. Our focus on microfrontends allows us to develop, deploy, and maintain each part of the application independently, providing us with greater flexibility and ease of development. Each microfrontend is a small standalone application that can be written in different frameworks or technologies, and yet, they all work together seamlessly on this website."
+}

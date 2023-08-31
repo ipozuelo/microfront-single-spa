@@ -1,3 +1,5 @@
 {
-    "hello": "Hola, mi nombre es "
+    "home": "Inicio",
+    "about": "Información",
+    "stencil":"Stencil"
 }

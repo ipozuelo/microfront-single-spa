@@ -1,4 +1,5 @@
-import { Component, Host, Prop, h } from '@stencil/core';
+import { Component, Host, Prop, h, Element } from '@stencil/core';
+import { getLocaleComponentStrings } from '../../utils/locale';
 
 @Component({
   tag: 'my-btn',
@@ -9,10 +10,17 @@ export class MyBtn {
 
   @Prop() text:string="click"
 
+  @Prop() lg: string = 'es';
+  @Element() element: HTMLElement;
+  strings: { [key: string]: string } = {};
+  async componentWillLoad() {
+    this.strings = await getLocaleComponentStrings(this.element, this.lg);
+  }
+
   render() {
     return (
       <Host>
-        <button>{this.text}</button>
+        <button>{this.strings[this.text]}</button>
       </Host>
     );
   }

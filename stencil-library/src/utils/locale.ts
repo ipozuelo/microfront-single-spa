@@ -1,5 +1,5 @@
-function getComponentClosestLanguage(): string {
-    return    localStorage.getItem("languaje") || 'en'
+function getComponentClosestLanguage(lang:string): string {
+    return    localStorage.getItem("languaje") || lang
 }
 
 function fetchLocaleStringsForComponent(componentName: string, locale: string): Promise<{ [key: string]: string }> {
@@ -12,15 +12,14 @@ function fetchLocaleStringsForComponent(componentName: string, locale: string): 
     });
 }
 
-export async function getLocaleComponentStrings(element: HTMLElement): Promise<{ [key: string]: string }> {
+export async function getLocaleComponentStrings(element: HTMLElement, languaje: string): Promise<{ [key: string]: string }> {
     let componentName = element.tagName.toLowerCase();
-    let componentLanguage = getComponentClosestLanguage();
+    let componentLanguage = getComponentClosestLanguage(languaje);
     let strings;
     try {
         strings = await fetchLocaleStringsForComponent(componentName, componentLanguage);
     } catch (e) {
-        console.warn(`no locale for {componentName} (${componentLanguage}) loading default locale en.`);
-        strings = await fetchLocaleStringsForComponent(componentName, 'en');
+        strings = await fetchLocaleStringsForComponent(componentName, 'es');
     }
     return strings;
 }
