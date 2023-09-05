@@ -1,3 +1,7 @@
+/**
+ * Do not edit directly
+ * Generated on Mon, 04 Sep 2023 06:20:38 GMT
+ */
 
 :root {
   --general-nav-logo-color: #fff;
@@ -21,6 +25,8 @@
   --general-general-btn-border-stroke: [object Object];
   --general-general-btn-color: #11101d;
   --general-general-color-code: #2d2b57;
+  --general-general-color-link: #4c00ff;
+  --general-general-color-hover-link: #0d8af1;
   --general-icon-ui-house: fa-solid fa-house;
   --dark-mode-nav-logo-color-dark: #fff;
   --dark-mode-nav-menu-color-dark: #555555;

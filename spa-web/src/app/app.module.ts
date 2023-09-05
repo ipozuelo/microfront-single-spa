@@ -9,6 +9,19 @@ import { SingleSpaComponent } from './single-spa/single-spa.component';
 import { ReactComponent } from './react/react.component';
 import { VueComponent } from './vue-info/vue.component';
 import { AngularInfoComponent } from './angular-info/angular-info.component';
+import { RootAppInfo } from './root-app/root-app-info.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateConfigService } from './services/translate-config.service';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(
+    http,
+    'http://localhost:9002/assets/i18n/',
+    '.json'
+  );
+}
 
 @NgModule({
   declarations: [
@@ -17,17 +30,25 @@ import { AngularInfoComponent } from './angular-info/angular-info.component';
     SingleSpaComponent,
     ReactComponent,
     VueComponent,
-    AngularInfoComponent
+    AngularInfoComponent,
+    RootAppInfo,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HighlightModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient],
+      },
+      defaultLanguage: 'es',
+    }),
   ],
-  providers: [
-   
-  ],
+  providers: [TranslateConfigService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {}

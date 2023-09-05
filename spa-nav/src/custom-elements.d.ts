@@ -3,6 +3,10 @@ declare namespace JSX {
       'li-nav':any
       'my-btn': any
       'my-card':any 
-      'my-link':any// Puedes ajustar este tipo según las propiedades admitidas por tu elemento personalizado
+      'my-link':any
+      'nav-app':any
     }
   }
+
+
+  

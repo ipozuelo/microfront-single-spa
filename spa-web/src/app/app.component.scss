@@ -1,3 +1,10 @@
+@import "../../../tokens/variables.scss";
+
+*{
+    text-align: justify;
+    font-size: calc($general-general-h4);
+}
+
 .hljs {
     display: block;
     color: white;
@@ -5,7 +12,7 @@
       "monospace";
     line-height: 1.45;
     padding: 1rem;
-    background: #2d2b57;
+    background: $general-general-color-code;
     font-weight: normal;
     border-radius: 0.5rem;
     margin-bottom: 15px;
@@ -18,24 +25,21 @@
 }
 
 h1{
-    font-size: 3rem;
+    font-size: $general-general-h1-size;
     margin-bottom: 10px;
 }
 
 h2{
-    font-size: 2rem;
+    font-size: $general-general-h2-size;
     margin-bottom: 10px;
 }
 
 h3{
-    font-size: 1.5rem;
+    font-size: $general-general-h3-size;
     margin-bottom: 10px;
 }
 
-*{
-    text-align: justify;
-    font-size: calc(1.25rem);
-}
+
 
 li {
     margin-left: 20px;
@@ -47,6 +51,6 @@ p{
 }
 
 img{
-    max-width: 1000px;
-    max-height: 500px;
+    max-width: 800px;
+    max-height: 400px;
 }

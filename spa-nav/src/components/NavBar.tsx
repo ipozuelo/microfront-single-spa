@@ -41,8 +41,8 @@ const NavBar = () => {
 
         <li>
           <a href="#">
-            <i className="bx bxl-javascript"></i>
-            <span className="links_name">{t("nav.stencil")}</span>
+          <i className='bx bx-error'></i>
+            <span className="links_name">{t("nav.incidents")}</span>
           </a>
         </li>
 
@@ -52,6 +52,20 @@ const NavBar = () => {
             <span className="links_name">{t("nav.web")}</span>
           </a>
         </li>
+        <li>
+          <a href="/library">
+          <i className='bx bx-library'></i>
+            <span className="links_name">{t("nav.library")}</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/tools">
+          <i className='bx bx-wrench'></i>
+            <span className="links_name">{t("nav.tools")}</span>
+          </a>
+        </li>
+    
       </ul>
 
       <div className="container-btn">

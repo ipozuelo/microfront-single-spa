@@ -1,13 +1,15 @@
 {
     "nav":{
         "home":"Home",
-        "information":"Information",
+        "information":"Frontend Team",
         "team":"Team",
         "web":"Web",
-        "stencil":"Stencil js"
+        "incidents":"Incidents",
+        "library":"Library",
+        "tools":"Tools"
     },
-    "home":{
-        "hello":"hello"
+    "about":{
+        "tittle":"About us"
     }
 
 }

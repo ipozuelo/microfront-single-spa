@@ -1,8 +1,10 @@
+@import "../../../tokens/variables.scss";
+
 .container h1 {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  font-size: 3rem;
+  font-size: $general-general-h1-size;
 }
 .container {
   margin-top: 40px;
@@ -13,11 +15,11 @@
 
 .container text-box {
   margin-bottom: 30px;
-  font-size: 20px;
+  font-size: $general-general-text-size;
   text-align: justify;
 }
 
 p {
-  font-size: 20px;
+  font-size:$general-general-text-size;
   text-align: justify;
 }

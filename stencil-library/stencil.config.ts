@@ -18,8 +18,8 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null, 
       copy: [{
-        src: "**/*.i18n.*.json",
-        dest: "assets/i18n"
+        src: 'src/assets/i18n/**/*.i18n.*.json',
+        dest: "dist/assets/i18n"
       }]
     },
     

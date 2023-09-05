@@ -1,12 +1,14 @@
 {
     "nav":{
         "home":"Inicio",
-        "information":"Información",
+        "information":"Equipo Frontend",
         "team":"Equipo",
         "web":"Web",
-        "stencil":"Stencil js"
+        "incidents":"Incidencias",
+        "library":"Librerías",
+        "tools":"Herramientas"
     },
-    "home":{
-        "hello":"hola"
+    "about":{
+        "tittle":"Sobre nosotros"
     }
 }

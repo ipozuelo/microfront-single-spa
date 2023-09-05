@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { TranslateConfigService } from './services/translate-config.service';
 
 
 
@@ -11,13 +11,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  constructor(private translateConfigService: TranslateConfigService) {}
 
-
-
-
-  
-
-  
+  ngOnInit(): void {
+    this.translateConfigService.changeLanguage(localStorage.getItem("languaje") || 'es')
+  }
 
   
 }

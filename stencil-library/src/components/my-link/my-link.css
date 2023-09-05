@@ -6,12 +6,12 @@
 
 a {
   display: inline-block;
-  color: #4c00ff;
+  color: var(--text-color-link);
   text-decoration: none;
   border-radius: var(--border-radius-btn);
   transition: background-color 0.3s;
 }
 
 a:hover {
-  background-color: #0d8af1;
+  background-color: var(--text-color-hover-link);
 }

@@ -10,4 +10,5 @@ export class ReactComponent {
 
 
   code_create_react_microfrontend ='$ create-single-spa --framework react'
+  code_ejecute_react = '$ npm run start:standalone'
 }

@@ -19,7 +19,7 @@
 }
 
 .sidebar .logo_content .logo {
-  color: #fff;
+  color: var(--logo-color);
   display: flex;
   height: 50px;
   width: 100%;
