@@ -14,28 +14,23 @@ export namespace Components {
     }
     interface LiNav {
         "icon": string;
-        "lg": string;
         "link": string;
         "text": string;
     }
     interface LightDarkMode {
     }
     interface MyBtn {
-        "lg": string;
         "text": string;
     }
     interface MyLink {
-        "lg": string;
         "link": string;
         "text": string;
     }
     interface NavApp {
         "itemList": NavItems[];
-        "lg": string;
         "tittle": string;
     }
     interface TextBox {
-        "lg": string;
         "text": string;
     }
 }
@@ -99,28 +94,23 @@ declare namespace LocalJSX {
     }
     interface LiNav {
         "icon"?: string;
-        "lg"?: string;
         "link"?: string;
         "text"?: string;
     }
     interface LightDarkMode {
     }
     interface MyBtn {
-        "lg"?: string;
         "text"?: string;
     }
     interface MyLink {
-        "lg"?: string;
         "link"?: string;
         "text"?: string;
     }
     interface NavApp {
         "itemList"?: NavItems[];
-        "lg"?: string;
         "tittle"?: string;
     }
     interface TextBox {
-        "lg"?: string;
         "text"?: string;
     }
     interface IntrinsicElements {

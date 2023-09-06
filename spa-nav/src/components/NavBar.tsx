@@ -1,5 +1,5 @@
 
-import "../style.css";
+import "../style-nav.css";
 import { useTranslation } from "react-i18next";
 
 const NavBar = () => {

@@ -1,0 +1,31 @@
+@import "../../../tokens/variables.scss";
+
+.container{
+    margin-top: 40px;
+    margin-left: 280px;
+    margin-right: 40px;
+    font-family: $general-general-text-font;
+
+
+    p{
+        text-align: justify;
+        font-size: $general-general-text-size;
+
+    }
+
+    h1{
+        font-size: $general-general-h1-size;
+
+    }
+
+    h2{
+        font-size: $general-general-h2-size;
+
+    }
+
+    h3{
+        font-size: $general-general-h3-size;
+    }
+}
+
+

@@ -1,5 +1,4 @@
-import { Component, Host, h, Prop, Element } from '@stencil/core';
-import { getLocaleComponentStrings } from '../../utils/locale';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'text-box',
@@ -7,23 +6,15 @@ import { getLocaleComponentStrings } from '../../utils/locale';
   shadow: true,
 })
 export class TextBox {
-
-  @Prop() text:string=""
-  @Prop() lg: string = 'es';
-  @Element() element: HTMLElement;
-  strings: { [key: string]: string } = {};
-  async componentWillLoad() {
-    this.strings = await getLocaleComponentStrings(this.element, this.lg);
-  }
+  @Prop() text: string = '';
 
   render() {
     return (
       <Host>
         <div class="caja">
-          <p class="texto">{this.strings[this.text]}</p>
+          <p class="texto">{this.text}</p>
         </div>
       </Host>
     );
   }
-
 }

@@ -1,6 +1,6 @@
-import { Component, Host, Prop, h, Element } from '@stencil/core';
+import { Component, Host, Prop, h } from '@stencil/core';
 import { NavItems } from './models/navItem.model';
-import { getLocaleComponentStrings } from '../../utils/locale';
+
 
 @Component({
   tag: 'nav-app',
@@ -13,15 +13,8 @@ export class NavApp {
     { text: 'about', icon: 'fa-solid fa-circle-info', link: '/about' },
     { text: 'stencil', icon: 'fa-solid fa-house', link: '/stencil' },
   ];
+
   @Prop() tittle: string = '';
-  @Prop() lg: string = 'es';
-
-  @Element() element: HTMLElement;
-  strings: { [key: string]: string } = {};
-  async componentWillLoad() {
-    this.strings = await getLocaleComponentStrings(this.element, this.lg);
-  }
-
   render() {
     return (
       <Host>
