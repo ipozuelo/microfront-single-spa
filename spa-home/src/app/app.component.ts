@@ -11,10 +11,7 @@ export class AppComponent implements OnInit {
   
   constructor(private translateConfigService: TranslateConfigService) {}
 
-  getTranslatedText(): string {
-    this.translateConfigService.loadTranslations("es")
-    return this.translateConfigService.getTranslation('home.tittle');
-  }
+ 
 
   ngOnInit(): void {
     this.translateConfigService.changeLanguage(localStorage.getItem("languaje") || 'es')

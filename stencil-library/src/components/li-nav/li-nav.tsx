@@ -9,14 +9,20 @@ import { Component, Host, h, Prop } from '@stencil/core';
 export class LiNav {
   @Prop() text: string = '';
   @Prop() link: string = '';
-  @Prop() icon: string = '';
+  @Prop() icon: string = ''
+
+  
+
 
   render() {
+
+    const iconClassName = getComputedStyle(document.documentElement).getPropertyValue(this.icon).trim();
+
     return (
       <Host>
         <li>
           <a href={this.link} class="nav-item">
-            <i class={this.icon}></i>
+            <i class={iconClassName}></i>
             <p>{this.text}</p>
           </a>
         </li>

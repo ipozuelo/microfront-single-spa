@@ -1,4 +1,4 @@
-@import "../../../tokens/variables.css";
+@import "../../../spa-root/src/assets/variables.css";
 
 
 :root{
@@ -12,6 +12,7 @@
     --hover-color-background-a: var(--general-nav-hover-a);
     --text-color-nav: var(--general-nav-text-color);
     --text-color-link: var( --general-general-color-link);
-    --text-color-hover-link:var(--general-general-color-hover-link)
+    --text-color-hover-link:var(--general-general-color-hover-link);
+    --icon-house:var(--general-icon-ui-house)
 }
 

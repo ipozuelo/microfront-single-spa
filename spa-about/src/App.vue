@@ -1,19 +1,10 @@
 <template>
 
     <h1>{{ $t('about.tittle') }}</h1>
-    <component-udemy></component-udemy>
+
 
 </template>
 
-<script>
-import Udemy from '@/components/Udemy.vue';
-
-export default {
-  components: {
-    'component-udemy': Udemy
-  }
-};
-</script>
 
 <style scoped>
 

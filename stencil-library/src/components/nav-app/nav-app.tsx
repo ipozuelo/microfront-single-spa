@@ -8,13 +8,20 @@ import { NavItems } from './models/navItem.model';
   shadow: true,
 })
 export class NavApp {
+
+  exIcon = {
+    icon: 'var(--icon-house)'
+  }
+
   @Prop() itemList: NavItems[] = [
-    { text: 'home', icon: 'fa-solid fa-house', link: '/' },
-    { text: 'about', icon: 'fa-solid fa-circle-info', link: '/about' },
-    { text: 'stencil', icon: 'fa-solid fa-house', link: '/stencil' },
+    { text: 'home', icon: '--icon-house', link: '/' },
+    { text: 'about', icon: '--icon-house', link: '/about' },
+    { text: 'stencil', icon: '--icon-house', link: '/stencil' },
   ];
 
   @Prop() tittle: string = '';
+
+
   render() {
     return (
       <Host>
