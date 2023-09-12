@@ -9,10 +9,7 @@ import { NavItems } from './models/navItem.model';
 })
 export class NavApp {
 
-  exIcon = {
-    icon: 'var(--icon-house)'
-  }
-
+ 
   @Prop() itemList: NavItems[] = [
     { text: 'home', icon: '--icon-house', link: '/' },
     { text: 'about', icon: '--icon-house', link: '/about' },
