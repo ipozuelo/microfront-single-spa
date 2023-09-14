@@ -3,7 +3,7 @@ const StyleDictionary = require("style-dictionary").extend({
   platforms: {
     css: {
       transformGroup: "css",
-      buildPath: "../tokens/",
+      buildPath: "../spa-root/src/assets/",
       files: [
         {
           destination: "variables.css",
@@ -13,7 +13,7 @@ const StyleDictionary = require("style-dictionary").extend({
     },
     scss: {
       transformGroup: "scss",
-      buildPath: "../tokens/",
+      buildPath: "../spa-root/src/assets/",
       files: [
         {
           destination: "colors/variables-general-colors.scss",
@@ -92,7 +92,6 @@ StyleDictionary.registerFormat({
   formatter: (diccionary) => {
     const customProperty = diccionary.allProperties
       .map((item) => {
-        console.log(item);
         if (item.attributes.category == "general") {
           const variable = item.name.replace("general-", "");
           if (variable.includes("border-radius")) {

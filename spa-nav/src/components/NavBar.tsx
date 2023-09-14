@@ -2,6 +2,7 @@
 import "../style-nav.css";
 import { useTranslation } from "react-i18next";
 
+
 const NavBar = () => {
   const { t, i18n } = useTranslation();
 
@@ -10,6 +11,7 @@ const NavBar = () => {
     window.location.reload()
     i18n.changeLanguage(lg)
   }
+  
 
   return (
     <nav className="sidebar">
@@ -71,6 +73,8 @@ const NavBar = () => {
       <div className="container-btn">
         <button onClick={()=> changeLanguage("es")}>Es</button>
         <button onClick={()=> changeLanguage("en")}>En</button>
+        <button>Claro</button>
+        <button>Oscuro</button>
       </div>
     </nav>
   );

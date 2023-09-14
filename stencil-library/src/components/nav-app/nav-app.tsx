@@ -12,8 +12,8 @@ export class NavApp {
  
   @Prop() itemList: NavItems[] = [
     { text: 'home', icon: '--icon-house', link: '/' },
-    { text: 'about', icon: '--icon-house', link: '/about' },
-    { text: 'stencil', icon: '--icon-house', link: '/stencil' },
+    { text: 'about', icon: '--icon-info', link: '/about' },
+    { text: 'stencil', icon: '--icon-exclamation', link: '/stencil' },
   ];
 
   @Prop() tittle: string = '';

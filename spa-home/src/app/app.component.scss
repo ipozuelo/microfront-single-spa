@@ -1,11 +1,12 @@
-@import "../../../tokens/variables.scss";
+@import "../../../tokens/fontFamilies/variables-fontFamilies.scss";
+@import "../../../tokens/fontSizes/variables-fontSizes.scss";
 
 .container h1 {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  font-size: $general-general-h1-size;
-  font-family: $general-general-text-font;
+  font-size: var(--general-general-h1-size);
+  font-family: var(--general-general-text-font);
 }
 .container {
   margin-top: 40px;
@@ -16,13 +17,13 @@
 
 .container text-box {
   margin-bottom: 30px;
-  font-size: $general-general-text-size;
+  font-size:var(--general-general-h1-size);
   text-align: justify;
-  font-family: $general-general-text-font;
+  font-family:var(--general-general-text-font);
 }
 
 p {
-  font-size:$general-general-text-size;
+  font-size:var(--general-general-h1-size);
   text-align: justify;
-  font-family: $general-general-text-font;
+  font-family:var(--general-general-text-font);
 }
