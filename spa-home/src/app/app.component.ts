@@ -17,5 +17,3 @@ export class AppComponent implements OnInit {
     this.translateConfigService.changeLanguage(localStorage.getItem("languaje") || 'es')
   }
 }
-
-

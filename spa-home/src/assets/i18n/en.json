@@ -1,4 +1,5 @@
 {
+    "hello":"hello",
     "home":{
         "tittle":"Welcome to our website created with Single SPA Microfrontends technology!",
         "init":"In this innovative website, we have adopted the microfrontends architecture using Single SPA to provide you with a modern and seamless web experience.",

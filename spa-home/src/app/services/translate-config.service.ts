@@ -20,4 +20,8 @@ export class TranslateConfigService {
     this.translateService.use(type);
   }
 
+  translte(tr:string){
+    return this.translateService.getTranslation(tr)
+  }
+
 }

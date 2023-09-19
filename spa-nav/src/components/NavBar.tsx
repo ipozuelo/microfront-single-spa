@@ -1,10 +1,13 @@
 
 import "../style-nav.css";
 import { useTranslation } from "react-i18next";
+import i18n from 'i18next';
 
 
 const NavBar = () => {
   const { t, i18n } = useTranslation();
+
+  const lit = i18n.t("nav.home")
 
   const changeLanguage = (lg:string) =>{
     localStorage.setItem("languaje",lg)
@@ -30,7 +33,7 @@ const NavBar = () => {
         <li>
           <a href="/home">
             <i className="bx bx-home"></i>
-            <span className="links_name">{t("nav.home")}</span>
+            <span className="links_name">{lit}</span>
           </a>
         </li>
 
