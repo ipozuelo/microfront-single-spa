@@ -1,9 +1,11 @@
+
+
 :host {
   display: block;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--text-fontFamily);
 }
 
 .sidebar {
@@ -14,7 +16,7 @@
   width: 240px;
   border: 1px solid black;
   padding: 6px 14px;
-  background-color: var(--background-color-nav);
+  background-color: var(--nav-color);
   border-radius: 0  10px  10px 0px;
 }
 
@@ -37,7 +39,9 @@
 
 .sidebar ul {
   margin-top: 30px;
+  list-style: none;
 }
+
 
 
 .container-btn {

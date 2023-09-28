@@ -1,26 +1,43 @@
-import Vue from 'vue';
-import singleSpaVue from 'single-spa-vue';
-import VueI18n from 'vue-i18n';
-import App from './App.vue';
+import Vue from "vue";
+import singleSpaVue from "single-spa-vue";
+import VueI18n from "vue-i18n";
+import App from "./App.vue";
+import axios from "axios"; 
 
-import es from '../../i18n/es.json'
-import en from '../../i18n/en.json'
 
-import Udemy from './components/Udemy.vue'
 
 Vue.use(VueI18n);
-Vue.component('component-udemy', Udemy);
+
+let esTranslations = {}
+axios
+  .get("http://localhost:3000/i18n/es.json") 
+  .then((response) => {
+    esTranslations = response.data
+  })
+  .catch((error) => {
+    console.error("Error al cargar las traducciones:", error);
+  });
+
+let enTranslations = {}
+axios
+  .get("http://localhost:3000/i18n/es.json") 
+  .then(response => response.json()).then(msg =>{
+    enTranslations = msg
+
+  }) 
+  .catch((error) => {
+    console.error("Error al cargar las traducciones:", error);
+  });
 
 const i18n = new VueI18n({
   legacy: false,
   locale: localStorage.getItem("languaje"),
-  fallbackLocale: 'en',
+  fallbackLocale: "es",
   messages: {
-    en,
-    es,
+    esTranslations,
+    enTranslations
   },
 });
-
 
 Vue.config.productionTip = false;
 
@@ -30,8 +47,7 @@ const vueLifecycles = singleSpaVue({
     i18n,
     render(h) {
       return h(App, {
-        props: {
-        },
+        props: {},
       });
     },
   },

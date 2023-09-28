@@ -8,7 +8,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateConfigService } from './services/translate-config.service';
 
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, 'http://localhost:9001/assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, 'http://localhost:3000/i18n/', '.json');
 }
 
 @NgModule({

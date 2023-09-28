@@ -1,6 +1,4 @@
 import { Component, Host, Prop, h } from '@stencil/core';
-import { NavItems } from './models/navItem.model';
-
 
 @Component({
   tag: 'nav-app',
@@ -10,19 +8,19 @@ import { NavItems } from './models/navItem.model';
 export class NavApp {
 
  
-  @Prop() itemList: NavItems[] = [
-    { text: 'home', icon: '--icon-house', link: '/' },
-    { text: 'about', icon: '--icon-info', link: '/about' },
-    { text: 'stencil', icon: '--icon-exclamation', link: '/stencil' },
-  ];
+  @Prop() itemList: any = [
+    { text: "home", icon: "--icon-house", link: "/home" },
+    { text:"about", icon: "--icon-info", link: "/about" },
+    { text:"web",icon: "--icon-code", link: "/web" },
+    { text: "library", icon: "--icon-laptop-code", link: "/library" },
+  ]
 
   @Prop() tittle: string = '';
-
 
   render() {
     return (
       <Host>
-          <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"></link>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"></link>
         <nav class="sidebar">
           <div class="logo_content">
             <div class="logo">
@@ -32,7 +30,7 @@ export class NavApp {
           </div>
 
           <ul class="nav-list">
-            {this.itemList.map((item, index) => (
+            {this.itemList?.map((item, index) => (
               <li-nav key={index} text={item.text} link={item.link} icon={item.icon}></li-nav>
             ))}
           </ul>
@@ -40,6 +38,7 @@ export class NavApp {
           <div class="container-btn">
             <btn-languaje text='es'></btn-languaje>
             <btn-languaje text='en' lg='en'></btn-languaje>
+            <light-dark-mode></light-dark-mode>
           </div>
         </nav>
       </Host>

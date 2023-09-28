@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+  <link rel="stylesheet" href="http://localhost:3000/css/variables.css">
+  <link rel="stylesheet" id="theme-colors" href="http://localhost:3000/css/colors/variables-general-colors.css">
   <title>Microfronted-App</title>
   <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https: http://localhost:3000; object-src 'none';">
@@ -24,8 +25,11 @@
   <script type="systemjs-importmap" src="/importmap.json"></script> 
   <% } %>
 
-  <script type="module"  src='https://cdn.jsdelivr.net/npm/stencil-library-web@0.0.14/dist/stencil-library/stencil-library.esm.js'></script>
-
+  <script type="module"  src='https://cdn.jsdelivr.net/npm/stencil-library-web@0.0.30/dist/stencil-library/stencil-library.esm.js'></script>
+  <link rel="stylesheet"  type="text/css""  href='https://cdn.jsdelivr.net/npm/stencil-library-web@0.0.28/dist/stencil-library/stencil-library.css'></link>
+  <script src="https://kit.fontawesome.com/d9bf3bb30e.js" crossorigin="anonymous"></script>
+  
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"></link>
   <script type="module" src='https://cdn.jsdelivr.net/npm/stencil-library-microfront-p1@0.0.1/loader/index.js'></script>
 
   <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
@@ -41,7 +45,9 @@
 </head>
 <style>
   body{
-    background-color: rgb(220, 218, 218);
+    background-color: var(--general-background-app);
+    color: var(--general-text-color);
+    font-family: var(--general-general-text-font);
   }
 </style>
 <body>

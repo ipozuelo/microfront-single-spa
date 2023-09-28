@@ -17,10 +17,11 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, 
-      copy: [{
-        src: 'src/assets/i18n/**/*.i18n.*.json',
-        dest: "dist/assets/i18n"
-      }]
+      copy: [
+        { 
+          src: 'global' 
+        }
+      ]
     },
     
     

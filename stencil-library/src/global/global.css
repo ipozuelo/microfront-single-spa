@@ -1,30 +1,21 @@
+@import url(http://localhost:3000/css/variables.css);
 
-@import "../../../tokens/icons/variables-icon.scss";
-@import "../../../tokens/borderRadius/variables-borderRadius.scss";
-@import "../../../tokens/borders/variables-border.scss";
-@import "../../../tokens/colors/variables-general-colors.scss";
-@import "../../../tokens/fontFamilies/variables-fontFamilies.scss";
-@import "../../../tokens/fontSizes/variables-fontSizes.scss";
 
-/*Dark Mode
-@import "../../../tokens/colors/variables-dark-colors.scss";
-@import "../../../tokens/borders/variables-border-dark-mode.scss";
-*/
 
 
 :root{
-    --btn-color-languaje: var(--nav-btn-color);
-    --btn-color-btn-nav: var(--nav-btn-color);
-    --logo-color: var(--nav-logo-color);
-    --border-radius-btn: var(--general-nav-btn-border-radius);
-    --background-color-nav: var(--nav-menu-color);
-    --hover-color-text-a: var(--nav-btn-hover);
-    --hover-color-background-a: var(--nav-hover-a);
+    --nav-color: var(--nav-menu-color);
+    --link-color: var(--general-color-link);
+    --link-hover-color:var(--general-color-hover-link);
+    --text-color:var(--general-text-color);
+   --border-btn-radius:var(--general-nav-btn-border-radius);
     --text-color-nav: var(--nav-text-color);
-    --text-color-link: var(--general-color-link);
-    --text-color-hover-link:var(--general-color-hover-link);
+    --logo-color: var(--nav-logo-color);
+    --nav-languaje-btn: var(--nav-btn-color);
+    --nav-hover-a: var(--nav-hover-a);
+    --text-fontFamily: var(--general-general-text-font);
 
-    /*Icon*/
+     
     --icon-house:var(--general-icon-ui-house);
     --icon-info:var(--general-icon-ui-info);
     --icon-tools:var(--general-icon-ui-tools);
@@ -33,6 +24,21 @@
     --icon-exclamation:var(--general-icon-ui-exclamation);
     --icon-laptop-code:var(--general-icon-ui-laptop-code);
     --icon-adjust:var(--general-icon-ui-adjust);
+    
+    
+    /*
+    --btn-color-btn-nav: var(--nav-btn-color);
+   
+    --background-color-nav: var(--nav-menu-color);
+    --hover-color-text-a: var(--nav-btn-hover);
+    --hover-color-background-a: var(--nav-hover-a);
+   
+    --text-color-link: var(--general-color-link);
+    --text-color-hover-link:var(--general-color-hover-link);
+    
+   
+
+    */
 
 }
 

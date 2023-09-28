@@ -5,8 +5,6 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { NavItems } from "./components/nav-app/models/navItem.model";
-export { NavItems } from "./components/nav-app/models/navItem.model";
 export namespace Components {
     interface BtnLanguaje {
         "lg": string;
@@ -27,7 +25,7 @@ export namespace Components {
         "text": string;
     }
     interface NavApp {
-        "itemList": NavItems[];
+        "itemList": any;
         "tittle": string;
     }
     interface TextBox {
@@ -107,7 +105,7 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface NavApp {
-        "itemList"?: NavItems[];
+        "itemList"?: any;
         "tittle"?: string;
     }
     interface TextBox {

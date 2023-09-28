@@ -1,5 +1,3 @@
-@import "../../../tokens/fontFamilies/variables-fontFamilies.scss";
-@import "../../../tokens/fontSizes/variables-fontSizes.scss";
 
 .container h1 {
   display: flex;
@@ -15,15 +13,19 @@
   margin-bottom: 40px;
 }
 
-.container text-box {
+.container text-box  {
   margin-bottom: 30px;
-  font-size:var(--general-general-h1-size);
+  margin-top: 30px;
   text-align: justify;
   font-family:var(--general-general-text-font);
+  color: black;
+  font-size: var(--general-general-text-size);
 }
 
 p {
-  font-size:var(--general-general-h1-size);
   text-align: justify;
   font-family:var(--general-general-text-font);
+  font-size: var(--general-general-text-size);
 }
+
+

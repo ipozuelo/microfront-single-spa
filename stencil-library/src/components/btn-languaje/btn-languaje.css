@@ -1,9 +1,9 @@
 :host {
   display: block;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--text-fontFamily);
 }
 
 button{
-  background-color: var( --btn-color-btn-nav);
-  border-radius: var(--border-radius-btn);
+  background-color: var(--nav-languaje-btn);
+  border-radius: var(--border-btn-radius);
 }

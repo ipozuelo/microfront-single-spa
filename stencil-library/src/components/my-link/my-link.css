@@ -1,17 +1,17 @@
 :host {
   display: block;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--text-fontFamily);
 }
 
 
 a {
   display: inline-block;
-  color: var(--text-color-link);
+  color: var( --link-color);
   text-decoration: none;
   border-radius: var(--border-radius-btn);
   transition: background-color 0.3s;
 }
 
 a:hover {
-  background-color: var(--text-color-hover-link);
+  background-color: var(--link-hover-color);
 }

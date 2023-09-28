@@ -21,7 +21,7 @@ export class TranslateConfigService {
   }
 
   translte(tr:string){
-    return this.translateService.getTranslation(tr)
+    return this.translateService.get(tr);
   }
 
 }
