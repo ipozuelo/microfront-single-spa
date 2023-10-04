@@ -20,6 +20,8 @@ export namespace Components {
     interface MyBtn {
         "text": string;
     }
+    interface MyCode {
+    }
     interface MyLink {
         "link": string;
         "text": string;
@@ -59,6 +61,12 @@ declare global {
         prototype: HTMLMyBtnElement;
         new (): HTMLMyBtnElement;
     };
+    interface HTMLMyCodeElement extends Components.MyCode, HTMLStencilElement {
+    }
+    var HTMLMyCodeElement: {
+        prototype: HTMLMyCodeElement;
+        new (): HTMLMyCodeElement;
+    };
     interface HTMLMyLinkElement extends Components.MyLink, HTMLStencilElement {
     }
     var HTMLMyLinkElement: {
@@ -82,6 +90,7 @@ declare global {
         "li-nav": HTMLLiNavElement;
         "light-dark-mode": HTMLLightDarkModeElement;
         "my-btn": HTMLMyBtnElement;
+        "my-code": HTMLMyCodeElement;
         "my-link": HTMLMyLinkElement;
         "nav-app": HTMLNavAppElement;
         "text-box": HTMLTextBoxElement;
@@ -102,6 +111,8 @@ declare namespace LocalJSX {
     interface MyBtn {
         "text"?: string;
     }
+    interface MyCode {
+    }
     interface MyLink {
         "link"?: string;
         "text"?: string;
@@ -120,6 +131,7 @@ declare namespace LocalJSX {
         "li-nav": LiNav;
         "light-dark-mode": LightDarkMode;
         "my-btn": MyBtn;
+        "my-code": MyCode;
         "my-link": MyLink;
         "nav-app": NavApp;
         "text-box": TextBox;
@@ -133,6 +145,7 @@ declare module "@stencil/core" {
             "li-nav": LocalJSX.LiNav & JSXBase.HTMLAttributes<HTMLLiNavElement>;
             "light-dark-mode": LocalJSX.LightDarkMode & JSXBase.HTMLAttributes<HTMLLightDarkModeElement>;
             "my-btn": LocalJSX.MyBtn & JSXBase.HTMLAttributes<HTMLMyBtnElement>;
+            "my-code": LocalJSX.MyCode & JSXBase.HTMLAttributes<HTMLMyCodeElement>;
             "my-link": LocalJSX.MyLink & JSXBase.HTMLAttributes<HTMLMyLinkElement>;
             "nav-app": LocalJSX.NavApp & JSXBase.HTMLAttributes<HTMLNavAppElement>;
             "text-box": LocalJSX.TextBox & JSXBase.HTMLAttributes<HTMLTextBoxElement>;
