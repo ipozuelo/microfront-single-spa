@@ -71,5 +71,26 @@
       "text_finish_edit": "After this, your Vue application should work correctly, and you can edit the project as if it were an independent Vue app.",
       "text_ejecute_proyect": "To run the microfrontend and use it in the \"root\" application, you would execute it with the following command:"
     }
+  },
+  "libraries":{
+    "tittle":"Librerías y tecnologías",
+    "init_text":"En el proceso de construcción de esta página web, hemos empleado una serie de librerías y tecnologías modernas que nos han permitido crear una experiencia de usuario excepcional y un diseño atractivo. Estas herramientas y recursos son esenciales para el funcionamiento y la apariencia de nuestra plataforma."
+  },
+  "tools":{
+    "tittle":"Tools",
+    "text_init":"In this section, we will explore the various tools I have used to develop the website.",
+    "git_hub":{
+      "tittle":"GitHub",
+      "text":"GitHub is a collaborative development platform that enables teams of programmers to efficiently manage software projects. It provides version control, issue tracking, and facilitates collaboration on source code, all in an online environment accessible from anywhere.",
+      "text_2":"En este caso, se ha almacenado todo el código en un repositorio"
+    },
+    "figma":{
+      "tittle":"Figma",
+      "text":"Figma is an online collaborative design tool that allows design teams to efficiently create, edit, and share design projects. It facilitates real-time collaboration and eliminates geographical barriers, making it a popular choice for designers worldwide."
+    },
+    "npm":{
+      "tittle":"NPM",
+      "text":"NPM (Node Package Manager) is an essential tool in the JavaScript development ecosystem. It enables developers to easily install, manage, and share reusable code packages. With NPM, you can download JavaScript libraries and modules, simplifying the development of web and server applications."
+    }
   }
 }

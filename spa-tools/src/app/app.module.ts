@@ -10,17 +10,19 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateConfigService } from './services/translate-config.service';
 import { GitHubComponent } from './git-hub/git-hub.component';
 import { FigmaComponent } from './figma/figma.component';
+import { NpmComponent } from './npm/npm.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, 'http://localhost:9003/assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, 'http://localhost:3000/i18n/', '.json');
 }
 
 @NgModule({
   declarations: [
     AppComponent,
     GitHubComponent,
-    FigmaComponent
+    FigmaComponent,
+    NpmComponent
   ],
   imports: [
     BrowserModule,

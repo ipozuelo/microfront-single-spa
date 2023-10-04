@@ -8,12 +8,14 @@
     --link-color: var(--general-color-link);
     --link-hover-color:var(--general-color-hover-link);
     --text-color:var(--general-text-color);
+    --nav-hover-li:var(--nav-btn-hover);
    --border-btn-radius:var(--general-nav-btn-border-radius);
     --text-color-nav: var(--nav-text-color);
     --logo-color: var(--nav-logo-color);
     --nav-languaje-btn: var(--nav-btn-color);
-    --nav-hover-a: var(--nav-hover-a);
+    --nav-hover-li-a: var(--nav-hover-a);
     --text-fontFamily: var(--general-general-text-font);
+    --code-color: var();
 
      
     --icon-house:var(--general-icon-ui-house);
@@ -24,6 +26,7 @@
     --icon-exclamation:var(--general-icon-ui-exclamation);
     --icon-laptop-code:var(--general-icon-ui-laptop-code);
     --icon-adjust:var(--general-icon-ui-adjust);
+    --icon-library:var(--general-icon-ui-book);
     
     
     /*

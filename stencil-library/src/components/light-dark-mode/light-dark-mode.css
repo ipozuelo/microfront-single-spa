@@ -1,15 +1,13 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 :host {
   display: block;
 }
 .toggle-button {
-  background-color: #007bff;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 5px;
   cursor: pointer;
+  background-color: transparent;
   transition: background-color 0.3s ease;
-}
-
-.toggle-button:hover {
-  background-color: #0056b3;
 }

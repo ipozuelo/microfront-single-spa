@@ -1,4 +1,4 @@
-import { Component, h, State } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { Component, h, State } from '@stencil/core';
 })
 export class LightDarkMode {
 
-  @State() darkMode = false;
+  
 
   handleClick() {
 
@@ -21,15 +21,16 @@ export class LightDarkMode {
         style.setAttribute('href', 'http://localhost:3000/css/colors/variables-dark-colors.css');
     }
   
-    this.darkMode = !this.darkMode;
   }
 
   render() {
-    const buttonText = this.darkMode ? 'Modo Claro' : 'Modo Oscuro';
-
+  
     return (
+      
       <button class="toggle-button" onClick={() => this.handleClick()}>
-        {buttonText}
+
+       <i class="fa-solid fa-circle-half-stroke"></i>
+      
       </button>
     );
   }

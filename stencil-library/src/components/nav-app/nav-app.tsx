@@ -6,26 +6,32 @@ import { Component, Host, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class NavApp {
-
- 
   @Prop() itemList: any = [
-    { text: "home", icon: "--icon-house", link: "/home" },
-    { text:"about", icon: "--icon-info", link: "/about" },
-    { text:"web",icon: "--icon-code", link: "/web" },
-    { text: "library", icon: "--icon-laptop-code", link: "/library" },
-  ]
+    { text: 'home', icon: '--icon-house', link: '/home' },
+    { text: 'about', icon: '--icon-info', link: '/about' },
+    { text: 'web', icon: '--icon-code', link: '/web' },
+    { text: 'library', icon: '--icon-library', link: '/library' },
+    { text: 'tools', icon: '--general-icon-ui-tools', link: '/tools' },
+  ];
 
   @Prop() tittle: string = '';
+
+  @Prop() theme: boolean = false;
+  @Prop() languaje: boolean = false;
 
   render() {
     return (
       <Host>
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"></link>
         <nav class="sidebar">
           <div class="logo_content">
             <div class="logo">
               <i class="bx bxl-deezer"></i>
               <span class="logo_name">{this.tittle}</span>
+              {this.theme ? (
+        <div class="theme-button">
+          <light-dark-mode></light-dark-mode>
+        </div>
+      ) : null}
             </div>
           </div>
 
@@ -34,12 +40,12 @@ export class NavApp {
               <li-nav key={index} text={item.text} link={item.link} icon={item.icon}></li-nav>
             ))}
           </ul>
-
-          <div class="container-btn">
-            <btn-languaje text='es'></btn-languaje>
-            <btn-languaje text='en' lg='en'></btn-languaje>
-            <light-dark-mode></light-dark-mode>
-          </div>
+          {this.languaje ? (
+            <div class="container-btn">
+              <btn-languaje text="es"></btn-languaje>
+              <btn-languaje text="en" lg="en"></btn-languaje>
+            </div>
+          ) : null}
         </nav>
       </Host>
     );

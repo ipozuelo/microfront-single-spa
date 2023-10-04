@@ -1,14 +1,12 @@
 
 *{
     text-align: justify;
-    font-family: var(--general-general-text-font);
 }
 
 .hljs {
     display: block;
-    color: white;
-    font-family: "Operator Mono", "Fira Code", "Menlo", "Monaco", "Courier New",
-      "monospace";
+    color: var(--general-color-text);
+    font-family: "Courier New";
     line-height: 1.45;
     padding: 1rem;
     background: var(--general-color-code);

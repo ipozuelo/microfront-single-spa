@@ -41,8 +41,11 @@
   margin-top: 30px;
   list-style: none;
 }
-
-
+.sidebar ul li-nav:hover{
+  background-color: var(--nav-hover-li-a);
+  color: var(--nav-hover-li);
+  border-radius: var(--border-btn-radius);
+}
 
 .container-btn {
   display: flex;
@@ -50,4 +53,26 @@
   bottom: 0;
   margin-bottom: 40px;
   margin-left: 80px;
+}
+
+
+light-dark-mode {
+  margin-left: 10px; /* Añade espacio entre el botón de cambio de tema y el contenido superior */
+}
+/* Estilos para hacer container-btn responsive */
+@media (max-width: 768px) {
+  .container-btn {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin-top: 20px;
+    margin-left: 80px;
+    flex-direction: column; /* Para apilar los botones verticalmente en dispositivos pequeños */
+    margin-bottom: 20px; /* Ajusta el margen inferior para dispositivos pequeños */
+  }
+}
+
+/* Estilos para los botones en container-btn */
+.container-btn btn-languaje {
+  margin-right: 10px; /* Espacio entre los botones de lenguaje */
 }

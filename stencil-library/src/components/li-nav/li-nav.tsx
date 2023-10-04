@@ -7,6 +7,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class LiNav {
+  
   @Prop() text: string = '';
   @Prop() link: string = '';
   @Prop() icon: string = ''

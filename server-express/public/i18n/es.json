@@ -10,7 +10,8 @@
         "tools":"Herramientas"
     },
     "about":{
-        "tittle":"Sobre nosotros"
+        "tittle":"Información útil",
+        "init_text":"En este apartado vamos a dar información que puede ser útil en un futuro"
     },
     "home":{
         "tittle":"¡Bienvenido a nuestro sitio web creado con la tecnología Single-SPA Microfrontends!",
@@ -71,6 +72,28 @@
           "text_edit_config": "  Una vez creado el proyecto Vue, hay que editar el archivo \"vue.config.js\" para que pueda funcionar correctamente nuestra aplicación. Lo único que hay que hacer es añadir una configuración de WebPack para que pueda visualizarse el microfrontend sin problemas. Se añadiría el siguiente código:",
           "text_finish_edit": "  Después de esto, tu aplicación Vue ya funciona correctamente y puedes editar el proyecto como si fuera una app Vue independiente.",
           "text_ejecute_proyect": "Para ejecutar el microfrontend y poder utilizarlo en la aplicación \"root\", se ejecutaría con el siguiente comando:"
+        }
+      },
+      "libraries":{
+        "tittle":"Librerías y tecnologías",
+        "init_text":"En el proceso de construcción de esta página web, hemos empleado una serie de librerías y tecnologías modernas que nos han permitido crear una experiencia de usuario excepcional y un diseño atractivo. Estas herramientas y recursos son esenciales para el funcionamiento y la apariencia de nuestra plataforma.",
+        "taduccion_tittle":"Librerías de traducción i18n"
+      },
+      "tools":{
+        "tittle":"Herramientas",
+        "text_init":"En este apartado vamos a ver las diferentes herramientas que he utilizado para poder desarrollar la web.",
+        "git_hub":{
+          "tittle":"GitHub",
+          "text":"GitHub es una plataforma de desarrollo colaborativo que permite a los equipos de programadores gestionar proyectos de software de manera eficiente. Permite el control de versiones, seguimiento de problemas y facilita la colaboración en código fuente, todo en un entorno en línea accesible desde cualquier lugar.",
+          "text_2":"En este caso, se ha almacenado todo el código en un repositorio para poder acceder fácilmente y poder conctarlo con Figma. Enlace: {{link}}"
+        },
+        "figma":{
+          "tittle":"Figma",
+          "text":"Figma es una herramienta de diseño colaborativo en línea que permite a equipos de diseño crear, editar y compartir proyectos de diseño de manera eficiente. Facilita la colaboración en tiempo real y elimina las barreras geográficas, lo que la convierte en una elección popular para diseñadores de todo el mundo."
+        },
+        "npm":{
+          "tittle":"NPM",
+          "text":"NPM (Node Package Manager) es una herramienta esencial en el ecosistema de desarrollo de JavaScript. Permite a los desarrolladores instalar, gestionar y compartir paquetes de código reutilizable de manera sencilla. Con NPM, se pueden descargar bibliotecas y módulos de JavaScript, simplificando el desarrollo de aplicaciones web y de servidor."
         }
       }
 }

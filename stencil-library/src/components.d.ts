@@ -26,6 +26,8 @@ export namespace Components {
     }
     interface NavApp {
         "itemList": any;
+        "languaje": boolean;
+        "theme": boolean;
         "tittle": string;
     }
     interface TextBox {
@@ -106,6 +108,8 @@ declare namespace LocalJSX {
     }
     interface NavApp {
         "itemList"?: any;
+        "languaje"?: boolean;
+        "theme"?: boolean;
         "tittle"?: string;
     }
     interface TextBox {

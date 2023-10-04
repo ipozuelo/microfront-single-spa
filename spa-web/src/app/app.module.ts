@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { HighlightModule } from 'ngx-highlightjs';
 import { AppComponent } from './app.component';
 import { StencilComponent } from './stencil/stencil.component';
 import { SingleSpaComponent } from './single-spa/single-spa.component';
@@ -14,6 +13,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateConfigService } from './services/translate-config.service';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'http://localhost:3000/i18n/', '.json');
@@ -43,7 +43,15 @@ export function createTranslateLoader(http: HttpClient) {
       defaultLanguage: 'es',
     }),
   ],
-  providers: [TranslateConfigService],
+  providers: [TranslateConfigService,   {
+    provide: HIGHLIGHT_OPTIONS,
+    useValue: {
+      coreLibraryLoader: () => import('highlight.js/lib/core'),
+      languages: {
+        typescript: () => import('highlight.js/lib/languages/typescript'),
+      }
+    }
+  }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
