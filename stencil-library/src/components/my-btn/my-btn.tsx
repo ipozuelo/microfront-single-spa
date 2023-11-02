@@ -10,12 +10,13 @@ export class MyBtn {
 
   @Prop() text:string="click"
 
+  @Prop() onClick: () => void;
 
 
   render() {
     return (
       <Host>
-        <button>{this.text}</button>
+        <button onClick={this.onClick}>{this.text}</button>
       </Host>
     );
   }

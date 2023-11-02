@@ -18,7 +18,7 @@
   --code-color-background: var(--general-color-code);
   --code-color-text: var(--general-color-text-code);
   --border-nav:var(--nav-btn-border-stroke);
-  --btn-color:var(--nav-btn-color);
+  --btn-color:var(--general-btn-primary);
 
   --icon-house: var(--general-icon-ui-house);
   --icon-info: var(--general-icon-ui-info);

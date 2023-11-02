@@ -18,6 +18,7 @@ export namespace Components {
     interface LightDarkMode {
     }
     interface MyBtn {
+        "onClick": () => void;
         "text": string;
     }
     interface MyCode {
@@ -111,6 +112,7 @@ declare namespace LocalJSX {
     interface LightDarkMode {
     }
     interface MyBtn {
+        "onClick"?: () => void;
         "text"?: string;
     }
     interface MyCode {

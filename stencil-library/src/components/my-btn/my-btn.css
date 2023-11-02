@@ -9,4 +9,6 @@ button{
   border-radius: var(--border-btn-radius);
   padding: 5px 10px;
   background-color:var(--btn-color);
+  border: none;
+  color: white;
 }

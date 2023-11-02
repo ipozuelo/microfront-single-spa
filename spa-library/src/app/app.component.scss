@@ -1,8 +1,10 @@
 .container {
   margin-top: 40px;
-  margin-left: 300px;
+  margin-left: 20%;
   margin-right: 40px;
 }
+
+
 
 p {
   text-align: justify;
@@ -33,5 +35,13 @@ h3 {
   &_medium {
     max-width: 1000px;
     max-height: 500px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container{
+      margin-top: 40px;
+      margin-left: 50%;
+      margin-right: 40px;
   }
 }
