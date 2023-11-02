@@ -1,5 +1,5 @@
 import { Component, h } from '@stencil/core';
-
+import 'https://kit.fontawesome.com/94e65f6987.js'
 
 @Component({
   tag: 'light-dark-mode',

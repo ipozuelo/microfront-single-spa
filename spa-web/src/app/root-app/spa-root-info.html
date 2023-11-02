@@ -1,63 +1,45 @@
 <h2>Root-App</h2>
-<p translate>web.root.init_text
-</p>
+<p translate>web.root.init_text</p>
 
-<p translate>
-  web.root.ol_text
-</p>
-<ol >
+<p translate>web.root.ol_text</p>
+<ol>
   <li translate>web.root.li_first_step</li>
-  <li translate>web.root.li_second_step
-  </li >
-  <li translate>web.root.li_third_step
-  </li>
-  <li translate>web.root.li_for_step
-  </li>
-  <li translate>
-    web.root.li_five_step
-  </li>
+  <li translate>web.root.li_second_step</li>
+  <li translate>web.root.li_third_step</li>
+  <li translate>web.root.li_for_step</li>
+  <li translate>web.root.li_five_step</li>
 </ol>
 
-<p translate>
-  web.root.finish_ol
-</p>
+<p translate>web.root.finish_ol</p>
 
-<p translate>
-  web.root.text_first_modification
-</p>
-<img
-  src="http://localhost:3000/images/spa-web/code_importmap_empty.png"
-  alt="importmap.json"
-/>
-<p translate>
-  web.root.text_first_modification_2
-</p>
+<p translate>web.root.text_first_modification</p>
 
-<pre> 
-    <code [highlight]="code_importmap_index" [languages]="['bash']"></code> 
-</pre>
+<div class="container_img">
+  <img
+    class="container_img_medium"
+    src="http://localhost:3000/images/spa-web/code_importmap_empty.png"
+    alt="importmap.json"
+  />
+</div>
 
-<p translate>
-  web.root.text_first_modification_3
-</p>
+<p translate>web.root.text_first_modification_2</p>
 
-<pre> 
-    <code [highlight]="code_webpack_config_importmap" [languages]="['bash']"></code> 
-</pre>
+<my-code text_code="{{ code_importmap_index }}"></my-code>
 
-<p translate>
-  web.root.text_second_modification
-</p>
+<p translate>web.root.text_first_modification_3</p>
 
-<img
-  src="http://localhost:3000/images/spa-web/code_import_webcomponent_cdn.png"
-  alt="import web component CDN"
-/>
+<my-code text_code="{{ code_webpack_config_importmap}}"></my-code>
 
-<p translate>
-  web.root.text_second_modification_1
-</p>
+<p translate>web.root.text_second_modification</p>
 
-<pre> 
-    <code [highlight]="code_ejecute_root_app" [languages]="['bash']"></code> 
-</pre>
+<div class="container_img">
+  <img
+    class="container_img_medium"
+    src="http://localhost:3000/images/spa-web/code_import_webcomponent_cdn.png"
+    alt="import web component CDN"
+  />
+</div>
+
+<p translate>web.root.text_second_modification_1</p>
+
+<my-code text_code="{{code_ejecute_root_app}}"></my-code>

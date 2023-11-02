@@ -4,7 +4,7 @@
     "jsx": "react-jsx",
     "declarationDir": "dist",
     "types": [
-      "./custom-elements.d.ts"
+      "./src/custom-elements.d.ts"
     ]
   },
   "files": ["src/spa-nav-spa-nav.tsx"],

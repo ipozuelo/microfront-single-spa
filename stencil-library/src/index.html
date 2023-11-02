@@ -2,38 +2,37 @@
 <html dir="ltr" lang="es">
   <head>
     <meta charset="utf-8" />
-   
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
-    <link rel="stylesheet" href="http://localhost:3000/css/variables.css">
-    <link rel="stylesheet" id="theme-colors" href="http://localhost:3000/css/colors/variables-general-colors.css">
-    <link rel="stylesheet" href="/build/stencil-library.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/variables.css" />
+    <link rel="stylesheet" id="theme-colors" href="http://localhost:3000/css/colors/variables-general-colors.css" />
+    <link rel="stylesheet" href="/build/stencil-library.css" />
     <script type="module" src="/build/stencil-library.esm.js"></script>
     <script nomodule src="/build/stencil-library.js"></script>
-    <link rel="stylesheet" href="/build/stencil-library.css">
+    <link rel="stylesheet" href="/build/stencil-library.css" />
     <script src="https://kit.fontawesome.com/94e65f6987.js" crossorigin="anonymous"></script>
   </head>
   <style>
-    .container{
-      margin-left: 270px;
+    .container {
+      margin-left: 18%;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .container {
+        margin-left: 30%
+      }
     }
   </style>
   <body>
-
-    <nav-app tittle = "NTT-DATA Frontend" theme={true} languaje={true}></nav-app>
-
+    <nav-app tittle="Nav-App"></nav-app>
     <div class="container">
-    <text-box text="home_text"></text-box>
-    <my-link text="click" link = "https://www.youtube.com/"></my-link>
-    <my-btn text="search"></my-btn>
-    <btn-languaje text="search"></btn-languaje>
-    <light-dark-mode></light-dark-mode>
+      <text-box text="home_text"></text-box>
+      <my-link text="click" link="https://www.youtube.com/"></my-link>
+      <my-btn text="search"></my-btn>
+      <btn-languaje text="search"></btn-languaje>
+      <light-dark-mode></light-dark-mode>
+      <my-code text_code="$ npm init stencil $ npm i  $ npm start $ npm init stencil $ npm i  $ npm start $ npm init stencil $ npm i  $ npm start $ npm init stencil $ npm i  $ npm start $ npm init stencil $ npm i  $ npm start $ npm init stencil $ npm i  $ npm start"></my-code>
     </div>
-
-   
-  
-   
-   
   </body>
- 
 </html>

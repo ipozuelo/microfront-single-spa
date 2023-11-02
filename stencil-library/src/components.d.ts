@@ -21,14 +21,16 @@ export namespace Components {
         "text": string;
     }
     interface MyCode {
+        "text_code": string;
     }
     interface MyLink {
         "link": string;
         "text": string;
     }
     interface NavApp {
-        "itemList": any;
+        "itemList": string;
         "languaje": boolean;
+        "list": string;
         "theme": boolean;
         "tittle": string;
     }
@@ -112,14 +114,16 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface MyCode {
+        "text_code"?: string;
     }
     interface MyLink {
         "link"?: string;
         "text"?: string;
     }
     interface NavApp {
-        "itemList"?: any;
+        "itemList"?: string;
         "languaje"?: boolean;
+        "list"?: string;
         "theme"?: boolean;
         "tittle"?: string;
     }

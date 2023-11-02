@@ -1,23 +1,19 @@
 
-
 :host {
-  display: block;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: var(--text-fontFamily);
 }
 
 .sidebar {
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
-  width: 240px;
-  border: 1px solid black;
+  width: 15%;
+  border: var(--border-nav);
   padding: 6px 14px;
   background-color: var(--nav-color);
-  border-radius: 0  10px  10px 0px;
+  border-radius: 0 10px 10px 0px;
 }
 
 .sidebar .logo_content .logo {
@@ -29,7 +25,7 @@
 }
 
 .sidebar .logo_content .logo i {
- margin-right: 10px;
+  margin-right: 10px;
 }
 
 .sidebar .logo_content .logo .logo_name {
@@ -40,8 +36,9 @@
 .sidebar ul {
   margin-top: 30px;
   list-style: none;
+  padding: 10px;
 }
-.sidebar ul li-nav:hover{
+.sidebar ul li-nav:hover {
   background-color: var(--nav-hover-li-a);
   color: var(--nav-hover-li);
   border-radius: var(--border-btn-radius);
@@ -55,24 +52,47 @@
   margin-left: 80px;
 }
 
-
 light-dark-mode {
-  margin-left: 10px; /* Añade espacio entre el botón de cambio de tema y el contenido superior */
+  margin-left: 10px;
 }
-/* Estilos para hacer container-btn responsive */
-@media (max-width: 768px) {
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    width: 25%;
+    border: var(--border-nav);
+    background-color: var(--nav-color);
+    border-radius: 0 10px 10px 0px;
+  }
+
+  .sidebar .logo_content .logo {
+    color: var(--logo-color);
+  }
+
+  .sidebar .logo_content .logo .logo_name {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .sidebar ul {
+    margin-top: 30px;
+    list-style: none;
+    padding: 10px;
+  }
+  .sidebar ul li-nav:hover {
+    background-color: var(--nav-hover-li-a);
+    color: var(--nav-hover-li);
+    border-radius: var(--border-btn-radius);
+  }
+
   .container-btn {
     display: flex;
     position: absolute;
     bottom: 0;
-    margin-top: 20px;
+    margin-bottom: 40px;
     margin-left: 80px;
-    flex-direction: column; /* Para apilar los botones verticalmente en dispositivos pequeños */
-    margin-bottom: 20px; /* Ajusta el margen inferior para dispositivos pequeños */
   }
-}
 
-/* Estilos para los botones en container-btn */
-.container-btn btn-languaje {
-  margin-right: 10px; /* Espacio entre los botones de lenguaje */
+  light-dark-mode {
+    margin-left: 10px;
+  }
 }

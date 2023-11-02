@@ -1,35 +1,36 @@
 @import url(http://localhost:3000/css/variables.css);
+@import url(http://localhost:3000/css/colors/variables-general-colors.css);
 
 
+:root {
+  --nav-color: var(--nav-menu-color);
+  --link-color: var(--general-color-link);
+  --link-hover-color: var(--general-color-hover-link);
+  --text-color: var(--general-text-color);
+  --nav-hover-li: var(--nav-btn-hover);
+  --border-btn-radius: var(--general-nav-btn-border-radius);
+  --text-color-nav: var(--nav-text-color);
+  --logo-color: var(--nav-logo-color);
+  --nav-languaje-btn: var(--nav-btn-color);
+  --nav-hover-li-a: var(--nav-hover-a);
+  --text-fontFamily: var(--general-general-text-font);
+  --code-fontFamily: var(--general-general-text-code);
+  --code-color-background: var(--general-color-code);
+  --code-color-text: var(--general-color-text-code);
+  --border-nav:var(--nav-btn-border-stroke);
+  --btn-color:var(--nav-btn-color);
 
+  --icon-house: var(--general-icon-ui-house);
+  --icon-info: var(--general-icon-ui-info);
+  --icon-tools: var(--general-icon-ui-tools);
+  --icon-code: var(--general-icon-ui-code);
+  --icon-file-code: var(--general-icon-ui-file-code);
+  --icon-exclamation: var(--general-icon-ui-exclamation);
+  --icon-laptop-code: var(--general-icon-ui-laptop-code);
+  --icon-adjust: var(--general-icon-ui-adjust);
+  --icon-library: var(--general-icon-ui-book);
 
-:root{
-    --nav-color: var(--nav-menu-color);
-    --link-color: var(--general-color-link);
-    --link-hover-color:var(--general-color-hover-link);
-    --text-color:var(--general-text-color);
-    --nav-hover-li:var(--nav-btn-hover);
-   --border-btn-radius:var(--general-nav-btn-border-radius);
-    --text-color-nav: var(--nav-text-color);
-    --logo-color: var(--nav-logo-color);
-    --nav-languaje-btn: var(--nav-btn-color);
-    --nav-hover-li-a: var(--nav-hover-a);
-    --text-fontFamily: var(--general-general-text-font);
-    --code-color: var();
-
-     
-    --icon-house:var(--general-icon-ui-house);
-    --icon-info:var(--general-icon-ui-info);
-    --icon-tools:var(--general-icon-ui-tools);
-    --icon-code:var(--general-icon-ui-code);
-    --icon-file-code:var(--general-icon-ui-file-code);
-    --icon-exclamation:var(--general-icon-ui-exclamation);
-    --icon-laptop-code:var(--general-icon-ui-laptop-code);
-    --icon-adjust:var(--general-icon-ui-adjust);
-    --icon-library:var(--general-icon-ui-book);
-    
-    
-    /*
+  /*
     --btn-color-btn-nav: var(--nav-btn-color);
    
     --background-color-nav: var(--nav-menu-color);
@@ -42,6 +43,4 @@
    
 
     */
-
 }
-

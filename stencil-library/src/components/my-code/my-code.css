@@ -1,3 +1,12 @@
-:host {
+
+
+code {
   display: block;
+  color: var(--code-color-text);
+  font-family: var(--code-fontFamily);
+  padding: 1rem;
+  background: var(--code-color-background);
+  border-radius:var(--border-btn-radius);
+  margin-bottom: 15px;
+  overflow-x: auto;
 }

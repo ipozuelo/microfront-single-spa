@@ -72,12 +72,50 @@
           "text_edit_config": "  Una vez creado el proyecto Vue, hay que editar el archivo \"vue.config.js\" para que pueda funcionar correctamente nuestra aplicación. Lo único que hay que hacer es añadir una configuración de WebPack para que pueda visualizarse el microfrontend sin problemas. Se añadiría el siguiente código:",
           "text_finish_edit": "  Después de esto, tu aplicación Vue ya funciona correctamente y puedes editar el proyecto como si fuera una app Vue independiente.",
           "text_ejecute_proyect": "Para ejecutar el microfrontend y poder utilizarlo en la aplicación \"root\", se ejecutaría con el siguiente comando:"
+        },
+        "server_express":{
+          "tittle":"Servidor Express",
+          "text":"Vamos a crear un servidor para enviar los archivos estáticos a la aplicación web y así sea más fácil poder modificar o subir archivos sin necesidad de tener que compilar todo el proyecto.",
+          "text_2":"Primero vamos a crear una carpeta con el nombre del servidor y ejecutemos unos comandos para crer un proyecto node. Una vez hecho esto, se añadirán dos librerías para que el servidor pueda arrancar correctamente.",
+          "text_3":"Una vez terminado, se crea el archivo \"index.js\" donde en su interior se escribirá toda la configuración del servidor.",
+          "text_4":"Ahora ya puedes crear la carpeta public para poder almacenar cualquier archivo estático que quieras enviar a tu aplicación web a través de un servidor externo.",
+          "text_5":"Por último, en este servidor he agregado un archivo llamado \"build.js\" donde se utiliza la librerya \"Style Dictionary\" para crear los archivos CSS que contienen todas las variables extraídas del .JSON generado por Figma Tokens. De este modo cada vez que se ejecute el servidor, se generarán todas las variables css por si hubiera algún cambio, por ello, en el archivo \"package.json\" se ha modificado el apartado de scripts para que se ejecuten todos los archivos."
         }
       },
       "libraries":{
         "tittle":"Librerías y tecnologías",
         "init_text":"En el proceso de construcción de esta página web, hemos empleado una serie de librerías y tecnologías modernas que nos han permitido crear una experiencia de usuario excepcional y un diseño atractivo. Estas herramientas y recursos son esenciales para el funcionamiento y la apariencia de nuestra plataforma.",
-        "taduccion_tittle":"Librerías de traducción i18n"
+        "taduccion_tittle":"Librerías de traducción i18n",
+
+        "react":{
+          "tittle":"React",
+          "text":"Primero hay que instalar la librería en el proyecto react. Para ello se ejecuta este comando: ",
+          "text_2":"Segundo, se crea un archivo \"i18n.ts\" donde se va a realizar ciertas configuraciones en nuestro sistema de internacionalización. Para empezar, hay que extraer los archivos .JSON donde se encuentran las traducciones divididas por idiomas que se encuentra en el servidor express que hemos desarrollado (explicación en el apartado de web). Por ello, se ha utilizado la librería \"axios\" de react para extraer la información desde una url. Una vez tengamos los .JSON, hay que crear el objeto i18n añadiendole los archivos y el idioma por defecto. Depués, se exporta el objeto i18n para poder utilizarlo en el componente principal de react.",
+          "text_3":"Ya solo queda utilizar el objeto i18n dentro del código haciendo uso de la función \".t\" y dentro de los paréntesis escribir entre comillas el identificados del literal que se quiere traducir del archivo .JSON. Un ejemplo sería: \"i18n.t(\"nav.home\")\" que devuelve el nombre de \"Home\" o \"Inicio\" dependiendo del idioma."
+        },
+        "vue":{
+          "tittle":"Vue",
+          "D":"Primero hay que instalar la librería en el proyecto Vue. Para ello se ejecuta este comando: ",
+          "text_2":"Segundo, hay que modificar el archivo \"main.js\". Se crea un objeto i18n para establecer un idioma por defecto, en este caso es el español. Después se crea la función  \"loadLanguaje\" que recibe el idioma en el que está la página. En este método se utiliza la librería \"axios\" para extraer los documentos .JSON donde se encuentran las traducciones, igual que en react. Una vez extraídos los datos, se introducen en el objeto i18n con el método \"setLocaleMessage\". Por último, se añade el objeto i18n al appOptions.",
+          "text_3":"Ya solo queda utilizar dentro del HTML la función \"$t()\" y dentro del paréntesis entre comillas la referencia al literal que se quiere traducir desde el archivo .JSON. Ejemplo:"
+        },
+        "angular":{
+          "tittle":"Angular",
+          "text_install":"Primero hay que instalar las librerías en el proyecto angular. Al utilizar una versión anterior de angular, hay que instalar las versiones compatibles de las librerías, para ello se ejecutan los siguientes comandos: ",
+          "text_2":"Segundo, hay que modificar el archivo \"app.module.ts\" y agregar una función que busque en una url los archivos .JSON que contenga las traducciones. Por ello se crea está función: ",
+          "text_3":"Después, hay que añadir a las importaciones del módulo el \"TranslateModule\" donde se añade la función creada anteriormente.",
+          "text_4":"Tercero, se crea un service con un constructor, importando el objeto desde translate/core y se establece un idioma por defecto, en este caso el español. Después se crean los métodos que se vayan a utilizar, el primero es para cambiar el idioma. Esté método se utiliza a la hora de cargar la página y comrpueba mediante localStorage que idioma está definido. El segundo método sirve para traducir un literal directamente desde el componente para almacenarlo en una variable. Después de crear el archivo, hay que difinirlo en el \"app.module.ts\" en el apartado de providers para podor utilizarlo en toda la app de angular.",
+          "text_5":"Por último, ya se pude traducir cualquier literal que esté definido en los archivos .JSON. Tan solo hay que ir al html y agregar el atributo \"translate\" a la etiqueta HTML. Ejemplo:"
+        },
+        "style_dicctionary":{
+          "tittle":"Librería Style Dictionary",
+          "text_init":"La librería de Style Dictionary nos permite utilizar los tokens de diseño para definir estilos y poder utilizarlos en distintas plataformas cómo: HTML, CSS, JS, iOS, Android...Está disponible tanto en CLI y en un módulo aparte para poder ampliar la funcionalidad.",
+          "text_2":"El problema más común es difinir un design system y cada vez que se quiere realizar un cambio se tengan que modificar en todas las plataformas uno a uno. Entonces, Style Dictionary resuelve esto manteniendo de una única fuente los estilos definidos y así se eliminan errores y se mejora la eficiencia del flujo de trabajo.",
+          "text_3":"En este caso, se ha creado un módulo aparte para generar varios archivos CSS desglosados en tipos de variables. Para ello, se diseñan los tokens desde figma, una vez estén craeados, se vínculan a un repositorio para llevarlo a una aplicación, de esto se genera un archivo .JSON con todos los tokens definidos. Una vez se tenga el archivo de los tokens, hay que crear el archivo \"build.js\" para construir los archivos CSS. Esto sería un ejemplo simple de cómo generar un archivo css en una ubicación específica y filtrando las variables de colores que no pertenezcan al modo oscuro del design system.",
+          "text_4":"Ahora, esto se puede customizar de cualquier manera, para poder desglosar los estilos de mil maneras diferentes adaptandolos a las necesidades de la aplicación. Otro ejemplo es el customFormat que se diseñó para poder crear variables de bordes en CSS, el problema aquí es que nos llega un objeto desde los tokens y hay que coger cada elemento del objeto y juntarlos en un solo atributo, consiguiendo así una sola propiedad border. También se dividen dependiendo de los coloros del border para diferenciar entre modo claro y modo oscuro.",
+          "text_5":"",
+          "text_6":""
+        }
       },
       "tools":{
         "tittle":"Herramientas",
@@ -85,15 +123,17 @@
         "git_hub":{
           "tittle":"GitHub",
           "text":"GitHub es una plataforma de desarrollo colaborativo que permite a los equipos de programadores gestionar proyectos de software de manera eficiente. Permite el control de versiones, seguimiento de problemas y facilita la colaboración en código fuente, todo en un entorno en línea accesible desde cualquier lugar.",
-          "text_2":"En este caso, se ha almacenado todo el código en un repositorio para poder acceder fácilmente y poder conctarlo con Figma. Enlace: {{link}}"
+          "text_2":"En este caso, se ha almacenado todo el código en un repositorio para poder acceder fácilmente y poder conctarlo con Figma. Enlace:"
         },
         "figma":{
           "tittle":"Figma",
-          "text":"Figma es una herramienta de diseño colaborativo en línea que permite a equipos de diseño crear, editar y compartir proyectos de diseño de manera eficiente. Facilita la colaboración en tiempo real y elimina las barreras geográficas, lo que la convierte en una elección popular para diseñadores de todo el mundo."
+          "text":"Figma es una herramienta de diseño colaborativo en línea que permite a equipos de diseño crear, editar y compartir proyectos de diseño de manera eficiente. Facilita la colaboración en tiempo real y elimina las barreras geográficas, lo que la convierte en una elección popular para diseñadores de todo el mundo.",
+          "text_2":"Para esta web se ha utilizado Figma para elaborar el Design System y enlazar los figma tokens con la web. Para ello se ha utilizado la extensión \"Tokens Studio for Figma\", que nos permite crear cualquier token para posteriormente enviarlo a un repositorio GitHub. Entonces, en el apartado de ajustes del plugin, se enlaza con un repositorio GitHub y cada vez que se haga un cambio en los tokens, se debería hacer un commit y push. Esto generará en el repositorio un archivo .JSON con todos los tokens organizados."
         },
         "npm":{
           "tittle":"NPM",
-          "text":"NPM (Node Package Manager) es una herramienta esencial en el ecosistema de desarrollo de JavaScript. Permite a los desarrolladores instalar, gestionar y compartir paquetes de código reutilizable de manera sencilla. Con NPM, se pueden descargar bibliotecas y módulos de JavaScript, simplificando el desarrollo de aplicaciones web y de servidor."
+          "text":"NPM (Node Package Manager) es una herramienta esencial en el ecosistema de desarrollo de JavaScript. Permite a los desarrolladores instalar, gestionar y compartir paquetes de código reutilizable de manera sencilla. Con NPM, se pueden descargar bibliotecas y módulos de JavaScript, simplificando el desarrollo de aplicaciones web y de servidor.",
+          "text_2":"A la hora de utilizar los web components disñados en Stencil js, se ha utilizado NPM para subir el paquete con todos los componentes y posteriormente enlazarlos a la aplicación root a través de una cdn. En este caso se ha utilizado \"jsDelivr \". En la aplicación root se añade el archivo con todos los componentes y el archivo css con todas las variables globales utilizadas."
         }
       }
 }

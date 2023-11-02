@@ -3,6 +3,11 @@
 :host {
   display: block;
 }
+
+li{
+  list-style: none;
+}
+
 .toggle-button {
   color: white;
   border: none;

@@ -10,7 +10,6 @@
 | Property | Attribute | Description | Type     | Default |
 | -------- | --------- | ----------- | -------- | ------- |
 | `icon`   | `icon`    |             | `string` | `''`    |
-| `lg`     | `lg`      |             | `string` | `'es'`  |
 | `link`   | `link`    |             | `string` | `''`    |
 | `text`   | `text`    |             | `string` | `''`    |
 

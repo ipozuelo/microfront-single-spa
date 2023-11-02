@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'my-code',
@@ -6,13 +6,13 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class MyCode {
+  @Prop() text_code: string = '';
 
   render() {
     return (
-      <Host>
-        <slot></slot>
-      </Host>
+      <pre>
+        <code>{this.text_code}</code>
+      </pre>
     );
   }
-
 }

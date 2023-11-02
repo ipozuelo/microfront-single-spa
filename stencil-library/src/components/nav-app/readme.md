@@ -7,23 +7,27 @@
 
 ## Properties
 
-| Property   | Attribute | Description | Type        | Default                                                                                                                                                                                                           |
-| ---------- | --------- | ----------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `itemList` | --        |             | `NavItem[]` | `[     { text: 'home', icon: 'fa-solid fa-house', link: '/' },     { text: 'about', icon: 'fa-solid fa-circle-info', link: '/about' },     { text: 'stencil', icon: 'fa-solid fa-house', link: '/stencil' },   ]` |
-| `lg`       | `lg`      |             | `string`    | `'es'`                                                                                                                                                                                                            |
-| `tittle`   | `tittle`  |             | `string`    | `''`                                                                                                                                                                                                              |
+| Property   | Attribute   | Description | Type      | Default                                                                                                             |
+| ---------- | ----------- | ----------- | --------- | ------------------------------------------------------------------------------------------------------------------- |
+| `itemList` | `item-list` |             | `string`  | `""`                                                                                                                |
+| `languaje` | `languaje`  |             | `boolean` | `false`                                                                                                             |
+| `list`     | `list`      |             | `string`  | ``[{ "text": "home", "icon": "--icon-house", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"}]`` |
+| `theme`    | `theme`     |             | `boolean` | `false`                                                                                                             |
+| `tittle`   | `tittle`    |             | `string`  | `''`                                                                                                                |
 
 
 ## Dependencies
 
 ### Depends on
 
+- [light-dark-mode](../light-dark-mode)
 - [li-nav](../li-nav)
 - [btn-languaje](../btn-languaje)
 
 ### Graph
 ```mermaid
 graph TD;
+  nav-app --> light-dark-mode
   nav-app --> li-nav
   nav-app --> btn-languaje
   style nav-app fill:#f9f,stroke:#333,stroke-width:4px

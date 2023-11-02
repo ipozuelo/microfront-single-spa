@@ -10,8 +10,8 @@ export class StencilComponent {
 
 
   code_npm_stencil_global = '$ npm install -g @stencil/cli';
-  code_npm_create_proyect_stencil = `$ npm init stencil
-$ npm i
+  code_npm_create_proyect_stencil = `$ npm init stencil  
+$ npm i 
 $ npm start`;
   code_create_web_component = '$ npm run generate';
   code_stencil_start = '$ npm start';

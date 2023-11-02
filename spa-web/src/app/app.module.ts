@@ -14,6 +14,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateConfigService } from './services/translate-config.service';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { ServerExpressComponent } from './server-express/server-express.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'http://localhost:3000/i18n/', '.json');
@@ -28,6 +29,7 @@ export function createTranslateLoader(http: HttpClient) {
     VueComponent,
     AngularInfoComponent,
     RootAppInfo,
+    ServerExpressComponent,
   ],
   imports: [
     BrowserModule,

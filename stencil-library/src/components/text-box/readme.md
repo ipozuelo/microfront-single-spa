@@ -9,8 +9,7 @@
 
 | Property | Attribute | Description | Type     | Default |
 | -------- | --------- | ----------- | -------- | ------- |
-| `lg`     | `lg`      |             | `string` | `'es'`  |
-| `text`   | `text`    |             | `string` | `""`    |
+| `text`   | `text`    |             | `string` | `''`    |
 
 
 ----------------------------------------------

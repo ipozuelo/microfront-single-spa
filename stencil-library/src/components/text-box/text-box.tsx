@@ -7,12 +7,8 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class TextBox {
   @Prop() text: string = '';
-
-
   render() {
     
-
-
     return (
       <Host>
         <div class="caja">

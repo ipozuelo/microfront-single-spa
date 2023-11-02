@@ -9,7 +9,6 @@
 
 | Property | Attribute | Description | Type     | Default   |
 | -------- | --------- | ----------- | -------- | --------- |
-| `lg`     | `lg`      |             | `string` | `'es'`    |
 | `text`   | `text`    |             | `string` | `"click"` |
 
 
