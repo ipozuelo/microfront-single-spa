@@ -1,5 +1,5 @@
 @import url(http://localhost:3000/css/variables.css);
-@import url(http://localhost:3000/css/colors/variables-general-colors.css);
+
 
 
 :root {
@@ -17,7 +17,15 @@
   --code-fontFamily: var(--general-general-text-code);
   --code-color-background: var(--general-color-code);
   --code-color-text: var(--general-color-text-code);
+  --hover-color-text-a: var(--hover-link);
+
+  --text-font-size:var(--general-general-text-size);
+  --text-nav-font-size:var(--general-nav-font-size);
+
+
   --border-nav:var(--nav-btn-border-stroke);
+
+  --stroke-color:var(--general-color-primary-separate-bar);
   --btn-color:var(--general-btn-primary);
 
   --icon-house: var(--general-icon-ui-house);
@@ -34,7 +42,7 @@
     --btn-color-btn-nav: var(--nav-btn-color);
    
     --background-color-nav: var(--nav-menu-color);
-    --hover-color-text-a: var(--nav-btn-hover);
+
     --hover-color-background-a: var(--nav-hover-a);
    
     --text-color-link: var(--general-color-link);

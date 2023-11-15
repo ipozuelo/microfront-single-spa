@@ -10,7 +10,8 @@
   left: 0;
   height: 100%;
   width: 15%;
-  border: var(--border-nav);
+  border-top: var(--border-nav);
+  border-right: var(--border-nav);
   padding: 6px 14px;
   background-color: var(--nav-color);
   border-radius: 0 10px 10px 0px;
@@ -46,10 +47,9 @@
 
 .container-btn {
   display: flex;
-  position: absolute;
-  bottom: 0;
+  align-items: flex-end;
   margin-bottom: 40px;
-  margin-left: 80px;
+  justify-content: space-evenly
 }
 
 light-dark-mode {
@@ -60,6 +60,8 @@ light-dark-mode {
   .sidebar {
     width: 25%;
     border: var(--border-nav);
+    border-top: var(--border-nav);
+    border-right: var(--border-nav);
     background-color: var(--nav-color);
     border-radius: 0 10px 10px 0px;
   }
@@ -86,10 +88,9 @@ light-dark-mode {
 
   .container-btn {
     display: flex;
-    position: absolute;
-    bottom: 0;
+    align-items: flex-end;
     margin-bottom: 40px;
-    margin-left: 80px;
+    justify-content: space-evenly
   }
 
   light-dark-mode {

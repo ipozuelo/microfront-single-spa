@@ -9,7 +9,7 @@ import 'https://kit.fontawesome.com/94e65f6987.js'
 })
 export class NavApp {
   @Prop() itemList: string="";
-  @Prop() list: string = `[{ "text": "home", "icon": "--icon-house", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"}]`
+  @Prop() list: string = `[{ "text": "home", "icon": "--icon-house", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"}]`
 
   @Prop() tittle: string = '';
 
@@ -19,7 +19,6 @@ export class NavApp {
   @State() obj:any;
 
   componentWillRender(){
-    console.log(this.list)
     this.obj = JSON.parse(this.list)
   }
   

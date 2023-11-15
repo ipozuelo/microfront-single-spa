@@ -54,7 +54,7 @@ const StyleDictionary = require("style-dictionary").extend({
         },
         {
           destination: "borders/variables-border-dark-mode.css",
-          format: "customFormat",
+          format: "customFormatBorder",
           filter: ({ type, ...params }) => {
             return (
               !["general"].includes(params.attributes.category) &&
@@ -64,7 +64,7 @@ const StyleDictionary = require("style-dictionary").extend({
         },
         {
           destination: "borders/variables-border.css",
-          format: "customFormat",
+          format: "customFormatBorder",
           filter: ({ type, ...params }) => {
             return (
               !["dark mode"].includes(params.attributes.category) &&
@@ -78,7 +78,7 @@ const StyleDictionary = require("style-dictionary").extend({
 });
 
 StyleDictionary.registerFormat({
-  name: "customFormat",
+  name: "customFormatBorder",
   formatter: (diccionary) => {
     const customProperty = diccionary.allProperties
       .map((item) => {

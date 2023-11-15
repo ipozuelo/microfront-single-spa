@@ -13,12 +13,16 @@ export class LightDarkMode {
   handleClick() {
 
     const style = document.getElementById('theme-colors');
+    const border = document.getElementById('colors-borders');
+
     if (style.getAttribute('href') === 'http://localhost:3000/css/colors/variables-dark-colors.css') {
         localStorage.setItem("theme","light")
         style.setAttribute('href', 'http://localhost:3000/css/colors/variables-general-colors.css');
+        border.setAttribute('href', 'http://localhost:3000/css/borders/variables-border.css');
     } else {
       localStorage.setItem("theme","dark")
         style.setAttribute('href', 'http://localhost:3000/css/colors/variables-dark-colors.css');
+        border.setAttribute('href', 'http://localhost:3000/css/borders/variables-border-dark-mode.css');
     }
   
   }
