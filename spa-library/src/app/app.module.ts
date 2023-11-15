@@ -12,6 +12,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateConfigService } from './services/translate-config.service';
 import { StyleDictionaryComponent } from './style-dictionary/style-dictionary.component';
+import { LibStorybookComponent } from './lib-storybook/lib-storybook.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'http://localhost:3000/i18n/', '.json');
@@ -24,6 +25,7 @@ export function createTranslateLoader(http: HttpClient) {
     TranslateVueComponent,
     TranslateAngularComponent,
     StyleDictionaryComponent,
+    LibStorybookComponent,
   ],
   imports: [
     BrowserModule,

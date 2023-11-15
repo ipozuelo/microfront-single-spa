@@ -1,139 +1,146 @@
 {
+  "nav": {
+    "home": "Inicio",
+    "information": "Equipo Frontend",
+    "team": "Equipo",
+    "web": "Web",
+    "incidents": "Incidencias",
+    "library": "Librerías",
+    "tools": "Herramientas"
+  },
+  "about": {
+    "tittle": "Información útil",
+    "init_text": "En este apartado vamos a dar información que puede ser útil en un futuro"
+  },
+  "home": {
+    "tittle": "¡Bienvenido a nuestro sitio web creado con la tecnología Single-SPA Microfrontends!",
+    "init": "En este innovador sitio, hemos adoptado la arquitectura de microfrontends utilizando Single SPA para brindarte una experiencia web moderna y fluida.",
+    "box": " ¿Te has preguntado cómo diferentes aplicaciones independientes pueden unirse para formar un sitio coherente y colaborativo? Bueno, eso es exactamente lo que hemos logrado aquí. Nuestro enfoque en microfrontends nos permite desarrollar, desplegar y mantener cada parte de la aplicación de forma independiente, lo que nos proporciona una mayor flexibilidad y facilidad de desarrollo. Cada microfrontend es una pequeña aplicación independiente que puede ser escrita en diferentes frameworks o tecnologías, y sin embargo, todas trabajan juntas sin problemas en este sitio web.",
+    "final": "Con Single SPA, hemos logrado una navegación fluida entre las distintas secciones del sitio, sin que tengas que esperar a que se cargue una página completamente nueva. Además, esto significa que cuando realicemos mejoras o actualizaciones en una parte de la aplicación, no afectará negativamente otras partes, lo que se traduce en un sitio más robusto y fácil de mantener."
+  },
+  "web": {
+    "tittle": "Desarrollo De la Web",
+    "first": "Primeros pasos",
+    "start_text": "¿Qué es el enfoque de microfrontends y Single-spa? En lugar de construir una aplicación monolítica, donde todos los componentes están fuertemente acoplados, adoptamos un enfoque modular al dividir nuestra aplicación en múltiples microfrontends independientes. Cada microfrontend es responsable de una parte específica de la aplicación y se desarrolla, prueba y despliega de manera independiente. Esto nos permite aprovechar las ventajas de diferentes tecnologías y equipos, promoviendo la colaboración y la eficiencia.",
+    "next_text": "Single-spa es una biblioteca JavaScript que nos ayuda a integrar y coordinar estos microfrontends en una única aplicación. Actúa como un orquestador, permitiéndonos cargar y descargar dinámicamente los módulos según sea necesario, lo que optimiza el rendimiento y mejora la experiencia del usuario.",
+    "stencil": {
+      "init_text": "Stencil JS es un framework de desarrollo web de código abierto creado por el equipo de Ionic. Su objetivo principal es facilitar la creación de componentes web reutilizables y de alto rendimiento. Stencil JS se encuentra enfocado en desarrollar aplicaciones web y componentes web utilizando las últimas características y estándares de la web moderna.",
+      "tittle_isntall_stencil": "Instalación y creación de un proyecto",
+      "li_first_step": " Asegúrate de tener Node.js instalado en tu computadora. Puedes descargar Node.js desde el sitio web oficial:",
+      "li_second_step": "Abre una terminal o línea de comandos en tu ordenador.",
+      "li_third_step": "Instala el CLI de Stencil JS de forma global ejecutando el siguiente comando:",
+      "text_create_proyect": "  Una vez que hayas instalado el CLI de Stencil.js, puedes crear un nuevo proyecto ejecutando el siguiente comando:",
+      "text_create_webcomponent": "Para crear nuevos componentes web puedes ejecutar el siguiente comando:",
+      "text_ejecute_stencil": "Para ejecutar el proyecto Stencil js ejecute en la consola:",
+      "text_public_npm": "Una vez se tengan todos los componentes web desarrollados, solo faltaría publicarlos en npm para poder utilizarlos en otras tecnologías web cómo Angular, React o Vue.",
+      "text_public_code_npm": "Para publicarlos hay que registrarse en la página oficial de NPM y una vez registrado ejecutar los siguientes comandos:"
+    },
+    "single_spa": {
+      "init_text": "Single-spa es una biblioteca de JavaScript que permite crear aplicaciones web de una sola página (SPA) a partir de múltiples aplicaciones independientes o microfrontends. La idea central de Single-spa es que cada microfrontend puede estar desarrollado con un marco o tecnología diferente, como Angular, React, Vue.js o cualquier otra de tu elección.",
+      "text_create_root": "Para empezar a crear tu aplicación microfrontend Single-SPA es a partir del siguiente comando:",
+      "text_finish": "Dentro de este comando tiene varias configuraciones que iremos viendo para poder crear cualquier microfrontend en React, Vue o Angular."
+    },
+    "root": {
+      "init_text": "La root app actúa como un \"contenedor\" que controla la navegación, carga y descarga de los microfrontends secundarios según sea necesario. También puede ser responsable de la autenticación, el enrutamiento y la gestión del estado global de la aplicación. En resumen, la root app establece el contexto y la estructura general de tu aplicación de microfrontends, permitiendo que las aplicaciones secundarias se integren y funcionen de manera conjunta para brindar una experiencia de usuario cohesiva.",
+      "ol_text": "Al ejecutar el comando \"create-single-spa\" hay que seleccionar una serie de opciones para que se cree correctamente la aplicación:",
+      "li_first_step": "Hay que seleccionar el directorio en el que se cree la aplicación.",
+      "li_second_step": "Luego hay que seleccionar la tercera opción, la que dice \"single-spa root config\"",
+      "li_third_step": "Después se selecciona la package manager que se desea utilizar, en este caso yo he utilizado npm.",
+      "li_for_step": "También da la opción de poder utilizar Typescript, para esta aplicación no lo hemos utilizado en la aplicación root.",
+      "li_five_step": " Por último, se selecciona \"yes\" para utilizar single-spa Layout Engine",
+      "finish_ol": "Y listo, ya se habrá generado la aplicación root del proyecto. Ahora hay que hacer algunas modificaciones para dejar lista la aplicación.",
+      "text_first_modification": " La primera modificación que haremos es editar el importmap del archivo \"index.ejs\" para poder mover todas las importaciones de los microfrontends a un archivo .json aparte y sea más fácil manejarlo y editarlo. Entonces lo primero que haremos es crear este archivo .json que lo llamaremos \"importmap.json\" en el directorio src. Para empezar tendrá que tener la siguiente estructura ya que aún no hemos añadido un microfrontend.",
+      "text_first_modification_2": "Luego, lo que tenemos que editar el archivo \"index.ejs\" para enlazar el archivo \"importmap.json\" que hemos creado con la aplicación. Para ello hay que sustituir la estructura que te da por defecto (línea 47) por esta línea de código:",
+      "text_first_modification_3": "Por último, hay que modificar el archivo \"webpack.config.js\" para que todo funcione correctamente y esté enlazado el \"importmap.json\". Esta modificación tan solo es agregar un plugin a la configuración.",
+      "text_second_modification": "Ahora, la segunda modificación que haremos es agregar nuestro paquete de Web Components. Lo haremos a través del paquete npm que hemos creado anteriormente con un enlace cdn. Solo hay que agregar una línea de código en el archivo \"index.ejs\" y todos los microfrontends podrán utilizar cualquier web component que esté disponible. (No tener en cuenta la versión del paquete NPM de la imagen)",
+      "text_second_modification_1": "Con esto ya tendremos a punto nuestra aplicación root y solo quedaría crear los microfrontends y añadirlos al archivo \"importmap.json\". Para ejecutar el proyecto hay que utilizar el siguiente comando (puede dar conflicto de puertos ya que se ejecuta en localhost:9000):"
+    },
 
-    "nav":{
-        "home":"Inicio",
-        "information":"Equipo Frontend",
-        "team":"Equipo",
-        "web":"Web",
-        "incidents":"Incidencias",
-        "library":"Librerías",
-        "tools":"Herramientas"
+    "react": {
+      "text_init": "La combinación de React con Single-SPA permite desarrollar microfrontends usando React como el framework principal para cada microfrontend. Cada microfrontend React puede ser desarrollado de manera independiente por equipos separados, lo que facilita la colaboración y el desarrollo iterativo. Luego, estas partes individuales se pueden compilar y empaquetar de manera que se integren perfectamente en la aplicación general gestionada por Single-spa.",
+      "text_ejecute_comand": "Ejecute el siguiente comando para crear un microfrontend React con las dependencias y paquetes que se requieren en el framework Single-SPA.",
+      "text_finish": "Esto generará un proyecto con un componente básico de React el cúal es muy fácil modificar. Para está web se ha utilizado React para desarrollar la barra de navegación entre las diferentes pantallas. Para ejecutar el microfrontend React hay que poner el siguiente comando en la terminal:"
     },
-    "about":{
-        "tittle":"Información útil",
-        "init_text":"En este apartado vamos a dar información que puede ser útil en un futuro"
+    "angular": {
+      "text_init": "La combinación de Angular con Single-spa permite desarrollar microfrontends usando Angular como el framework principal para cada módulo. Cada microfrontend Angular puede ser desarrollado de manera independiente por equipos separados, lo que facilita la colaboración y la escalabilidad en proyectos grandes.",
+      "text_config_main": "Para configurar correctamente un microfrontend de Angular, una vez creado el proyecto tienes que abrir el archivo \"main.single-spa.ts\" y te tiene que quedar tal cual la imagen. Borrando las líneas donde den error por la importación de \"enviroment\".",
+      "text_route": "Después tenemos que añadir al archivo \"app-routing.module.ts\" el módulo \"empty-route\" que se genera con el microfrontend. El archivo tiene que quedar tal cual la imagen."
     },
-    "home":{
-        "tittle":"¡Bienvenido a nuestro sitio web creado con la tecnología Single-SPA Microfrontends!",
-        "init":"En este innovador sitio, hemos adoptado la arquitectura de microfrontends utilizando Single SPA para brindarte una experiencia web moderna y fluida.",
-        "box":" ¿Te has preguntado cómo diferentes aplicaciones independientes pueden unirse para formar un sitio coherente y colaborativo? Bueno, eso es exactamente lo que hemos logrado aquí. Nuestro enfoque en microfrontends nos permite desarrollar, desplegar y mantener cada parte de la aplicación de forma independiente, lo que nos proporciona una mayor flexibilidad y facilidad de desarrollo. Cada microfrontend es una pequeña aplicación independiente que puede ser escrita en diferentes frameworks o tecnologías, y sin embargo, todas trabajan juntas sin problemas en este sitio web.",
-        "final":"Con Single SPA, hemos logrado una navegación fluida entre las distintas secciones del sitio, sin que tengas que esperar a que se cargue una página completamente nueva. Además, esto significa que cuando realicemos mejoras o actualizaciones en una parte de la aplicación, no afectará negativamente otras partes, lo que se traduce en un sitio más robusto y fácil de mantener."
+    "vue": {
+      "text_init": "Vue.js en Single-spa para microfrontends permite construir aplicaciones web modulares y escalables con un rendimiento óptimo. Vue.js se integra sin problemas, facilitando el desarrollo y la colaboración en equipos mientras  garantiza una carga eficiente de módulos cuando sea necesario. Con el siguiente comando podremos crear una aplicación microfrontend de Vue.",
+      "text_edit_config": "  Una vez creado el proyecto Vue, hay que editar el archivo \"vue.config.js\" para que pueda funcionar correctamente nuestra aplicación. Lo único que hay que hacer es añadir una configuración de WebPack para que pueda visualizarse el microfrontend sin problemas. Se añadiría el siguiente código:",
+      "text_finish_edit": "  Después de esto, tu aplicación Vue ya funciona correctamente y puedes editar el proyecto como si fuera una app Vue independiente.",
+      "text_ejecute_proyect": "Para ejecutar el microfrontend y poder utilizarlo en la aplicación \"root\", se ejecutaría con el siguiente comando:"
     },
-    "web": {
-        "tittle": "Desarrollo De la Web",
-        "first": "Primeros pasos",
-        "start_text": "¿Qué es el enfoque de microfrontends y Single-spa? En lugar de construir una aplicación monolítica, donde todos los componentes están fuertemente acoplados, adoptamos un enfoque modular al dividir nuestra aplicación en múltiples microfrontends independientes. Cada microfrontend es responsable de una parte específica de la aplicación y se desarrolla, prueba y despliega de manera independiente. Esto nos permite aprovechar las ventajas de diferentes tecnologías y equipos, promoviendo la colaboración y la eficiencia.",
-        "next_text": "Single-spa es una biblioteca JavaScript que nos ayuda a integrar y coordinar estos microfrontends en una única aplicación. Actúa como un orquestador, permitiéndonos cargar y descargar dinámicamente los módulos según sea necesario, lo que optimiza el rendimiento y mejora la experiencia del usuario.",
-        "stencil": {
-          "init_text": "Stencil JS es un framework de desarrollo web de código abierto creado por el equipo de Ionic. Su objetivo principal es facilitar la creación de componentes web reutilizables y de alto rendimiento. Stencil JS se encuentra enfocado en desarrollar aplicaciones web y componentes web utilizando las últimas características y estándares de la web moderna.",
-          "tittle_isntall_stencil": "Instalación y creación de un proyecto",
-          "li_first_step": " Asegúrate de tener Node.js instalado en tu computadora. Puedes descargar Node.js desde el sitio web oficial:",
-          "li_second_step": "Abre una terminal o línea de comandos en tu ordenador.",
-          "li_third_step": "Instala el CLI de Stencil JS de forma global ejecutando el siguiente comando:",
-          "text_create_proyect": "  Una vez que hayas instalado el CLI de Stencil.js, puedes crear un nuevo proyecto ejecutando el siguiente comando:",
-          "text_create_webcomponent": "Para crear nuevos componentes web puedes ejecutar el siguiente comando:",
-          "text_ejecute_stencil": "Para ejecutar el proyecto Stencil js ejecute en la consola:",
-          "text_public_npm": "Una vez se tengan todos los componentes web desarrollados, solo faltaría publicarlos en npm para poder utilizarlos en otras tecnologías web cómo Angular, React o Vue.",
-          "text_public_code_npm": "Para publicarlos hay que registrarse en la página oficial de NPM y una vez registrado ejecutar los siguientes comandos:"
-        },
-        "single_spa": {
-          "init_text": "Single-spa es una biblioteca de JavaScript que permite crear aplicaciones web de una sola página (SPA) a partir de múltiples aplicaciones independientes o microfrontends. La idea central de Single-spa es que cada microfrontend puede estar desarrollado con un marco o tecnología diferente, como Angular, React, Vue.js o cualquier otra de tu elección.",
-          "text_create_root": "Para empezar a crear tu aplicación microfrontend Single-SPA es a partir del siguiente comando:",
-          "text_finish": "Dentro de este comando tiene varias configuraciones que iremos viendo para poder crear cualquier microfrontend en React, Vue o Angular."
-        },
-        "root": {
-          "init_text": "La root app actúa como un \"contenedor\" que controla la navegación, carga y descarga de los microfrontends secundarios según sea necesario. También puede ser responsable de la autenticación, el enrutamiento y la gestión del estado global de la aplicación. En resumen, la root app establece el contexto y la estructura general de tu aplicación de microfrontends, permitiendo que las aplicaciones secundarias se integren y funcionen de manera conjunta para brindar una experiencia de usuario cohesiva.",
-          "ol_text": "Al ejecutar el comando \"create-single-spa\" hay que seleccionar una serie de opciones para que se cree correctamente la aplicación:",
-          "li_first_step": "Hay que seleccionar el directorio en el que se cree la aplicación.",
-          "li_second_step": "Luego hay que seleccionar la tercera opción, la que dice \"single-spa root config\"",
-          "li_third_step": "Después se selecciona la package manager que se desea utilizar, en este caso yo he utilizado npm.",
-          "li_for_step": "También da la opción de poder utilizar Typescript, para esta aplicación no lo hemos utilizado en la aplicación root.",
-          "li_five_step": " Por último, se selecciona \"yes\" para utilizar single-spa Layout Engine",
-          "finish_ol": "Y listo, ya se habrá generado la aplicación root del proyecto. Ahora hay que hacer algunas modificaciones para dejar lista la aplicación.",
-          "text_first_modification": " La primera modificación que haremos es editar el importmap del archivo \"index.ejs\" para poder mover todas las importaciones de los microfrontends a un archivo .json aparte y sea más fácil manejarlo y editarlo. Entonces lo primero que haremos es crear este archivo .json que lo llamaremos \"importmap.json\" en el directorio src. Para empezar tendrá que tener la siguiente estructura ya que aún no hemos añadido un microfrontend.",
-          "text_first_modification_2": "Luego, lo que tenemos que editar el archivo \"index.ejs\" para enlazar el archivo \"importmap.json\" que hemos creado con la aplicación. Para ello hay que sustituir la estructura que te da por defecto (línea 47) por esta línea de código:",
-          "text_first_modification_3": "Por último, hay que modificar el archivo \"webpack.config.js\" para que todo funcione correctamente y esté enlazado el \"importmap.json\". Esta modificación tan solo es agregar un plugin a la configuración.",
-          "text_second_modification": "Ahora, la segunda modificación que haremos es agregar nuestro paquete de Web Components. Lo haremos a través del paquete npm que hemos creado anteriormente con un enlace cdn. Solo hay que agregar una línea de código en el archivo \"index.ejs\" y todos los microfrontends podrán utilizar cualquier web component que esté disponible. (No tener en cuenta la versión del paquete NPM de la imagen)",
-          "text_second_modification_1": "Con esto ya tendremos a punto nuestra aplicación root y solo quedaría crear los microfrontends y añadirlos al archivo \"importmap.json\". Para ejecutar el proyecto hay que utilizar el siguiente comando (puede dar conflicto de puertos ya que se ejecuta en localhost:9000):"
-        },
-    
-        "react": {
-          "text_init": "La combinación de React con Single-SPA permite desarrollar microfrontends usando React como el framework principal para cada microfrontend. Cada microfrontend React puede ser desarrollado de manera independiente por equipos separados, lo que facilita la colaboración y el desarrollo iterativo. Luego, estas partes individuales se pueden compilar y empaquetar de manera que se integren perfectamente en la aplicación general gestionada por Single-spa.",
-          "text_ejecute_comand": "Ejecute el siguiente comando para crear un microfrontend React con las dependencias y paquetes que se requieren en el framework Single-SPA.",
-          "text_finish": "Esto generará un proyecto con un componente básico de React el cúal es muy fácil modificar. Para está web se ha utilizado React para desarrollar la barra de navegación entre las diferentes pantallas. Para ejecutar el microfrontend React hay que poner el siguiente comando en la terminal:"
-        },
-        "angular": {
-          "text_init": "La combinación de Angular con Single-spa permite desarrollar microfrontends usando Angular como el framework principal para cada módulo. Cada microfrontend Angular puede ser desarrollado de manera independiente por equipos separados, lo que facilita la colaboración y la escalabilidad en proyectos grandes.",
-          "text_config_main": "Para configurar correctamente un microfrontend de Angular, una vez creado el proyecto tienes que abrir el archivo \"main.single-spa.ts\" y te tiene que quedar tal cual la imagen. Borrando las líneas donde den error por la importación de \"enviroment\".",
-          "text_route": "Después tenemos que añadir al archivo \"app-routing.module.ts\" el módulo \"empty-route\" que se genera con el microfrontend. El archivo tiene que quedar tal cual la imagen."
-        },
-        "vue": {
-          "text_init": "Vue.js en Single-spa para microfrontends permite construir aplicaciones web modulares y escalables con un rendimiento óptimo. Vue.js se integra sin problemas, facilitando el desarrollo y la colaboración en equipos mientras  garantiza una carga eficiente de módulos cuando sea necesario. Con el siguiente comando podremos crear una aplicación microfrontend de Vue.",
-          "text_edit_config": "  Una vez creado el proyecto Vue, hay que editar el archivo \"vue.config.js\" para que pueda funcionar correctamente nuestra aplicación. Lo único que hay que hacer es añadir una configuración de WebPack para que pueda visualizarse el microfrontend sin problemas. Se añadiría el siguiente código:",
-          "text_finish_edit": "  Después de esto, tu aplicación Vue ya funciona correctamente y puedes editar el proyecto como si fuera una app Vue independiente.",
-          "text_ejecute_proyect": "Para ejecutar el microfrontend y poder utilizarlo en la aplicación \"root\", se ejecutaría con el siguiente comando:"
-        },
-        "server_express":{
-          "tittle":"Servidor Express",
-          "text":"Vamos a crear un servidor para enviar los archivos estáticos a la aplicación web y así sea más fácil poder modificar o subir archivos sin necesidad de tener que compilar todo el proyecto.",
-          "text_2":"Primero vamos a crear una carpeta con el nombre del servidor y ejecutemos unos comandos para crer un proyecto node. Una vez hecho esto, se añadirán dos librerías para que el servidor pueda arrancar correctamente.",
-          "text_3":"Una vez terminado, se crea el archivo \"index.js\" donde en su interior se escribirá toda la configuración del servidor.",
-          "text_4":"Ahora ya puedes crear la carpeta public para poder almacenar cualquier archivo estático que quieras enviar a tu aplicación web a través de un servidor externo.",
-          "text_5":"Por último, en este servidor he agregado un archivo llamado \"build.js\" donde se utiliza la librerya \"Style Dictionary\" para crear los archivos CSS que contienen todas las variables extraídas del .JSON generado por Figma Tokens. De este modo cada vez que se ejecute el servidor, se generarán todas las variables css por si hubiera algún cambio, por ello, en el archivo \"package.json\" se ha modificado el apartado de scripts para que se ejecuten todos los archivos."
-        }
-      },
-      "libraries":{
-        "tittle":"Librerías y tecnologías",
-        "init_text":"En el proceso de construcción de esta página web, hemos empleado una serie de librerías y tecnologías modernas que nos han permitido crear una experiencia de usuario excepcional y un diseño atractivo. Estas herramientas y recursos son esenciales para el funcionamiento y la apariencia de nuestra plataforma.",
-        "taduccion_tittle":"Librerías de traducción i18n",
+    "server_express": {
+      "tittle": "Servidor Express",
+      "text": "Vamos a crear un servidor para enviar los archivos estáticos a la aplicación web y así sea más fácil poder modificar o subir archivos sin necesidad de tener que compilar todo el proyecto.",
+      "text_2": "Primero vamos a crear una carpeta con el nombre del servidor y ejecutemos unos comandos para crer un proyecto node. Una vez hecho esto, se añadirán dos librerías para que el servidor pueda arrancar correctamente.",
+      "text_3": "Una vez terminado, se crea el archivo \"index.js\" donde en su interior se escribirá toda la configuración del servidor.",
+      "text_4": "Ahora ya puedes crear la carpeta public para poder almacenar cualquier archivo estático que quieras enviar a tu aplicación web a través de un servidor externo.",
+      "text_5": "Por último, en este servidor he agregado un archivo llamado \"build.js\" donde se utiliza la librerya \"Style Dictionary\" para crear los archivos CSS que contienen todas las variables extraídas del .JSON generado por Figma Tokens. De este modo cada vez que se ejecute el servidor, se generarán todas las variables css por si hubiera algún cambio, por ello, en el archivo \"package.json\" se ha modificado el apartado de scripts para que se ejecuten todos los archivos."
+    }
+  },
+  "libraries": {
+    "tittle": "Librerías y tecnologías",
+    "init_text": "En el proceso de construcción de esta página web, hemos empleado una serie de librerías y tecnologías modernas que nos han permitido crear una experiencia de usuario excepcional y un diseño atractivo. Estas herramientas y recursos son esenciales para el funcionamiento y la apariencia de nuestra plataforma.",
 
-        "react":{
-          "tittle":"React",
-          "text":"Primero hay que instalar la librería en el proyecto react. Para ello se ejecuta este comando: ",
-          "text_2":"Segundo, se crea un archivo \"i18n.ts\" donde se va a realizar ciertas configuraciones en nuestro sistema de internacionalización. Para empezar, hay que extraer los archivos .JSON donde se encuentran las traducciones divididas por idiomas que se encuentra en el servidor express que hemos desarrollado (explicación en el apartado de web). Por ello, se ha utilizado la librería \"axios\" de react para extraer la información desde una url. Una vez tengamos los .JSON, hay que crear el objeto i18n añadiendole los archivos y el idioma por defecto. Depués, se exporta el objeto i18n para poder utilizarlo en el componente principal de react.",
-          "text_3":"Ya solo queda utilizar el objeto i18n dentro del código haciendo uso de la función \".t\" y dentro de los paréntesis escribir entre comillas el identificados del literal que se quiere traducir del archivo .JSON. Un ejemplo sería: \"i18n.t(\"nav.home\")\" que devuelve el nombre de \"Home\" o \"Inicio\" dependiendo del idioma."
-        },
-        "vue":{
-          "tittle":"Vue",
-          "D":"Primero hay que instalar la librería en el proyecto Vue. Para ello se ejecuta este comando: ",
-          "text_2":"Segundo, hay que modificar el archivo \"main.js\". Se crea un objeto i18n para establecer un idioma por defecto, en este caso es el español. Después se crea la función  \"loadLanguaje\" que recibe el idioma en el que está la página. En este método se utiliza la librería \"axios\" para extraer los documentos .JSON donde se encuentran las traducciones, igual que en react. Una vez extraídos los datos, se introducen en el objeto i18n con el método \"setLocaleMessage\". Por último, se añade el objeto i18n al appOptions.",
-          "text_3":"Ya solo queda utilizar dentro del HTML la función \"$t()\" y dentro del paréntesis entre comillas la referencia al literal que se quiere traducir desde el archivo .JSON. Ejemplo:"
-        },
-        "angular":{
-          "tittle":"Angular",
-          "text_install":"Primero hay que instalar las librerías en el proyecto angular. Al utilizar una versión anterior de angular, hay que instalar las versiones compatibles de las librerías, para ello se ejecutan los siguientes comandos: ",
-          "text_2":"Segundo, hay que modificar el archivo \"app.module.ts\" y agregar una función que busque en una url los archivos .JSON que contenga las traducciones. Por ello se crea está función: ",
-          "text_3":"Después, hay que añadir a las importaciones del módulo el \"TranslateModule\" donde se añade la función creada anteriormente.",
-          "text_4":"Tercero, se crea un service con un constructor, importando el objeto desde translate/core y se establece un idioma por defecto, en este caso el español. Después se crean los métodos que se vayan a utilizar, el primero es para cambiar el idioma. Esté método se utiliza a la hora de cargar la página y comrpueba mediante localStorage que idioma está definido. El segundo método sirve para traducir un literal directamente desde el componente para almacenarlo en una variable. Después de crear el archivo, hay que difinirlo en el \"app.module.ts\" en el apartado de providers para podor utilizarlo en toda la app de angular.",
-          "text_5":"Por último, ya se pude traducir cualquier literal que esté definido en los archivos .JSON. Tan solo hay que ir al html y agregar el atributo \"translate\" a la etiqueta HTML. Ejemplo:"
-        },
-        "style_dicctionary":{
-          "tittle":"Librería Style Dictionary",
-          "text_init":"La librería de Style Dictionary nos permite utilizar los tokens de diseño para definir estilos y poder utilizarlos en distintas plataformas cómo: HTML, CSS, JS, iOS, Android...Está disponible tanto en CLI y en un módulo aparte para poder ampliar la funcionalidad.",
-          "text_2":"El problema más común es difinir un design system y cada vez que se quiere realizar un cambio se tengan que modificar en todas las plataformas uno a uno. Entonces, Style Dictionary resuelve esto manteniendo de una única fuente los estilos definidos y así se eliminan errores y se mejora la eficiencia del flujo de trabajo.",
-          "text_3":"En este caso, se ha creado un módulo aparte para generar varios archivos CSS desglosados en tipos de variables. Para ello, se diseñan los tokens desde figma, una vez estén craeados, se vínculan a un repositorio para llevarlo a una aplicación, de esto se genera un archivo .JSON con todos los tokens definidos. Una vez se tenga el archivo de los tokens, hay que crear el archivo \"build.js\" para construir los archivos CSS. Esto sería un ejemplo simple de cómo generar un archivo css en una ubicación específica y filtrando las variables de colores que no pertenezcan al modo oscuro del design system.",
-          "text_4":"Ahora, esto se puede customizar de cualquier manera, para poder desglosar los estilos de mil maneras diferentes adaptandolos a las necesidades de la aplicación. Otro ejemplo es el customFormat que se diseñó para poder crear variables de bordes en CSS, el problema aquí es que nos llega un objeto desde los tokens y hay que coger cada elemento del objeto y juntarlos en un solo atributo, consiguiendo así una sola propiedad border. También se dividen dependiendo de los coloros del border para diferenciar entre modo claro y modo oscuro.",
-          "text_5":"",
-          "text_6":""
-        }
+    "translate": {
+      "translate_tittle": "Librerías de traducción i18n",
+
+      "react": {
+        "tittle": "React",
+        "text": "Primero hay que instalar la librería en el proyecto react. Para ello se ejecuta este comando: ",
+        "text_2": "Segundo, se crea un archivo \"i18n.ts\" donde se va a realizar ciertas configuraciones en nuestro sistema de internacionalización. Para empezar, hay que extraer los archivos .JSON donde se encuentran las traducciones divididas por idiomas que se encuentra en el servidor express que hemos desarrollado (explicación en el apartado de web). Por ello, se ha utilizado la librería \"axios\" de react para extraer la información desde una url. Una vez tengamos los .JSON, hay que crear el objeto i18n añadiendole los archivos y el idioma por defecto. Depués, se exporta el objeto i18n para poder utilizarlo en el componente principal de react.",
+        "text_3": "Ya solo queda utilizar el objeto i18n dentro del código haciendo uso de la función \".t\" y dentro de los paréntesis escribir entre comillas el identificados del literal que se quiere traducir del archivo .JSON. Un ejemplo sería: \"i18n.t(\"nav.home\")\" que devuelve el nombre de \"Home\" o \"Inicio\" dependiendo del idioma."
       },
-      "tools":{
-        "tittle":"Herramientas",
-        "text_init":"En este apartado vamos a ver las diferentes herramientas que he utilizado para poder desarrollar la web.",
-        "git_hub":{
-          "tittle":"GitHub",
-          "text":"GitHub es una plataforma de desarrollo colaborativo que permite a los equipos de programadores gestionar proyectos de software de manera eficiente. Permite el control de versiones, seguimiento de problemas y facilita la colaboración en código fuente, todo en un entorno en línea accesible desde cualquier lugar.",
-          "text_2":"En este caso, se ha almacenado todo el código en un repositorio para poder acceder fácilmente y poder conctarlo con Figma. Enlace:"
-        },
-        "figma":{
-          "tittle":"Figma",
-          "text":"Figma es una herramienta de diseño colaborativo en línea que permite a equipos de diseño crear, editar y compartir proyectos de diseño de manera eficiente. Facilita la colaboración en tiempo real y elimina las barreras geográficas, lo que la convierte en una elección popular para diseñadores de todo el mundo.",
-          "text_2":"Para esta web se ha utilizado Figma para elaborar el Design System y enlazar los figma tokens con la web. Para ello se ha utilizado la extensión \"Tokens Studio for Figma\", que nos permite crear cualquier token para posteriormente enviarlo a un repositorio GitHub. Entonces, en el apartado de ajustes del plugin, se enlaza con un repositorio GitHub y cada vez que se haga un cambio en los tokens, se debería hacer un commit y push. Esto generará en el repositorio un archivo .JSON con todos los tokens organizados."
-        },
-        "npm":{
-          "tittle":"NPM",
-          "text":"NPM (Node Package Manager) es una herramienta esencial en el ecosistema de desarrollo de JavaScript. Permite a los desarrolladores instalar, gestionar y compartir paquetes de código reutilizable de manera sencilla. Con NPM, se pueden descargar bibliotecas y módulos de JavaScript, simplificando el desarrollo de aplicaciones web y de servidor.",
-          "text_2":"A la hora de utilizar los web components disñados en Stencil js, se ha utilizado NPM para subir el paquete con todos los componentes y posteriormente enlazarlos a la aplicación root a través de una cdn. En este caso se ha utilizado \"jsDelivr \". En la aplicación root se añade el archivo con todos los componentes y el archivo css con todas las variables globales utilizadas."
-        }
+      "vue": {
+        "tittle": "Vue",
+        "text_init": "Primero hay que instalar la librería en el proyecto Vue. Para ello se ejecuta este comando: ",
+        "text_2": "Segundo, hay que modificar el archivo \"main.js\". Se crea un objeto i18n para establecer un idioma por defecto, en este caso es el español. Después se crea la función  \"loadLanguaje\" que recibe el idioma en el que está la página. En este método se utiliza la librería \"axios\" para extraer los documentos .JSON donde se encuentran las traducciones, igual que en react. Una vez extraídos los datos, se introducen en el objeto i18n con el método \"setLocaleMessage\". Por último, se añade el objeto i18n al appOptions.",
+        "text_3": "Ya solo queda utilizar dentro del HTML la función \"$t()\" y dentro del paréntesis entre comillas la referencia al literal que se quiere traducir desde el archivo .JSON. Ejemplo:"
+      },
+      "angular": {
+        "tittle": "Angular",
+        "text_install": "Primero hay que instalar las librerías en el proyecto angular. Al utilizar una versión anterior de angular, hay que instalar las versiones compatibles de las librerías, para ello se ejecutan los siguientes comandos: ",
+        "text_2": "Segundo, hay que modificar el archivo \"app.module.ts\" y agregar una función que busque en una url los archivos .JSON que contenga las traducciones. Por ello se crea está función: ",
+        "text_3": "Después, hay que añadir a las importaciones del módulo el \"TranslateModule\" donde se añade la función creada anteriormente.",
+        "text_4": "Tercero, se crea un service con un constructor, importando el objeto desde translate/core y se establece un idioma por defecto, en este caso el español. Después se crean los métodos que se vayan a utilizar, el primero es para cambiar el idioma. Esté método se utiliza a la hora de cargar la página y comrpueba mediante localStorage que idioma está definido. El segundo método sirve para traducir un literal directamente desde el componente para almacenarlo en una variable. Después de crear el archivo, hay que difinirlo en el \"app.module.ts\" en el apartado de providers para podor utilizarlo en toda la app de angular.",
+        "text_5": "Por último, ya se pude traducir cualquier literal que esté definido en los archivos .JSON. Tan solo hay que ir al html y agregar el atributo \"translate\" a la etiqueta HTML. Ejemplo:"
       }
+    },
+
+    "style_dicctionary": {
+      "tittle": "Librería Style Dictionary",
+      "text_init": "La librería de Style Dictionary nos permite utilizar los tokens de diseño para definir estilos y poder utilizarlos en distintas plataformas cómo: HTML, CSS, JS, iOS, Android...Está disponible tanto en CLI y en un módulo aparte para poder ampliar la funcionalidad.",
+      "text_2": "El problema más común es difinir un design system y cada vez que se quiere realizar un cambio se tengan que modificar en todas las plataformas uno a uno. Entonces, Style Dictionary resuelve esto manteniendo de una única fuente los estilos definidos y así se eliminan errores y se mejora la eficiencia del flujo de trabajo.",
+      "text_3": "En este caso, se ha creado un módulo aparte para generar varios archivos CSS desglosados en tipos de variables. Para ello, se diseñan los tokens desde figma, una vez estén craeados, se vínculan a un repositorio para llevarlo a una aplicación, de esto se genera un archivo .JSON con todos los tokens definidos. Una vez se tenga el archivo de los tokens, hay que crear el archivo \"build.js\" para construir los archivos CSS. Esto sería un ejemplo simple de cómo generar un archivo css en una ubicación específica y filtrando las variables de colores que no pertenezcan al modo oscuro del design system.",
+      "text_4": "Ahora, esto se puede customizar de cualquier manera, para poder desglosar los estilos de mil maneras diferentes adaptandolos a las necesidades de la aplicación. Otro ejemplo es el customFormat que se diseñó para poder crear variables de bordes en CSS, el problema aquí es que nos llega un objeto desde los tokens y hay que coger cada elemento del objeto y juntarlos en un solo atributo, consiguiendo así una sola propiedad border. También se dividen dependiendo de los coloros del border para diferenciar entre modo claro y modo oscuro."
+    },
+    "storybook": {
+      "tittle": "StoryBook",
+      "text_init": "Storybook es una herramienta de desarrollo de código abierto que permite a los desarrolladores crear y visualizar componentes de interfaz de usuario de manera aislada, lo que facilita su desarrollo, pruebas y documentación. Es ampliamente utilizado en el desarrollo de aplicaciones web y permite a los equipos de desarrollo trabajar en componentes de manera independiente antes de integrarlos en la aplicación principal.",
+      "text_2": "Storybook proporciona una interfaz de usuario interactiva para ver y probar los componentes, lo que facilita la colaboración y la detección temprana de problemas visuales y de usabilidad.",
+      "text_3": "En este proyecto se ha utilizado para visualizar los distintos web components desarrollados en Stencil js de una forma más clara."
+    }
+  },
+  "tools": {
+    "tittle": "Herramientas",
+    "text_init": "En este apartado vamos a ver las diferentes herramientas que he utilizado para poder desarrollar la web.",
+    "git_hub": {
+      "tittle": "GitHub",
+      "text": "GitHub es una plataforma de desarrollo colaborativo que permite a los equipos de programadores gestionar proyectos de software de manera eficiente. Permite el control de versiones, seguimiento de problemas y facilita la colaboración en código fuente, todo en un entorno en línea accesible desde cualquier lugar.",
+      "text_2": "En este caso, se ha almacenado todo el código en un repositorio para poder acceder fácilmente y poder conctarlo con Figma. Enlace:"
+    },
+    "figma": {
+      "tittle": "Figma",
+      "text": "Figma es una herramienta de diseño colaborativo en línea que permite a equipos de diseño crear, editar y compartir proyectos de diseño de manera eficiente. Facilita la colaboración en tiempo real y elimina las barreras geográficas, lo que la convierte en una elección popular para diseñadores de todo el mundo.",
+      "text_2": "Para esta web se ha utilizado Figma para elaborar el Design System y enlazar los figma tokens con la web. Para ello se ha utilizado la extensión \"Tokens Studio for Figma\", que nos permite crear cualquier token para posteriormente enviarlo a un repositorio GitHub. Entonces, en el apartado de ajustes del plugin, se enlaza con un repositorio GitHub y cada vez que se haga un cambio en los tokens, se debería hacer un commit y push. Esto generará en el repositorio un archivo .JSON con todos los tokens organizados."
+    },
+    "npm": {
+      "tittle": "NPM",
+      "text": "NPM (Node Package Manager) es una herramienta esencial en el ecosistema de desarrollo de JavaScript. Permite a los desarrolladores instalar, gestionar y compartir paquetes de código reutilizable de manera sencilla. Con NPM, se pueden descargar bibliotecas y módulos de JavaScript, simplificando el desarrollo de aplicaciones web y de servidor.",
+      "text_2": "A la hora de utilizar los web components disñados en Stencil js, se ha utilizado NPM para subir el paquete con todos los componentes y posteriormente enlazarlos a la aplicación root a través de una cdn. En este caso se ha utilizado \"jsDelivr \". En la aplicación root se añade el archivo con todos los componentes y el archivo css con todas las variables globales utilizadas."
+    }
+  }
 }

@@ -18,7 +18,6 @@ export namespace Components {
     interface LightDarkMode {
     }
     interface MyBtn {
-        "onClick": () => void;
         "text": string;
     }
     interface MyCode {
@@ -34,6 +33,8 @@ export namespace Components {
         "list": string;
         "theme": boolean;
         "tittle": string;
+    }
+    interface SeparateBar {
     }
     interface TextBox {
         "text": string;
@@ -82,6 +83,12 @@ declare global {
         prototype: HTMLNavAppElement;
         new (): HTMLNavAppElement;
     };
+    interface HTMLSeparateBarElement extends Components.SeparateBar, HTMLStencilElement {
+    }
+    var HTMLSeparateBarElement: {
+        prototype: HTMLSeparateBarElement;
+        new (): HTMLSeparateBarElement;
+    };
     interface HTMLTextBoxElement extends Components.TextBox, HTMLStencilElement {
     }
     var HTMLTextBoxElement: {
@@ -96,6 +103,7 @@ declare global {
         "my-code": HTMLMyCodeElement;
         "my-link": HTMLMyLinkElement;
         "nav-app": HTMLNavAppElement;
+        "separate-bar": HTMLSeparateBarElement;
         "text-box": HTMLTextBoxElement;
     }
 }
@@ -112,7 +120,6 @@ declare namespace LocalJSX {
     interface LightDarkMode {
     }
     interface MyBtn {
-        "onClick"?: () => void;
         "text"?: string;
     }
     interface MyCode {
@@ -129,6 +136,8 @@ declare namespace LocalJSX {
         "theme"?: boolean;
         "tittle"?: string;
     }
+    interface SeparateBar {
+    }
     interface TextBox {
         "text"?: string;
     }
@@ -140,6 +149,7 @@ declare namespace LocalJSX {
         "my-code": MyCode;
         "my-link": MyLink;
         "nav-app": NavApp;
+        "separate-bar": SeparateBar;
         "text-box": TextBox;
     }
 }
@@ -154,6 +164,7 @@ declare module "@stencil/core" {
             "my-code": LocalJSX.MyCode & JSXBase.HTMLAttributes<HTMLMyCodeElement>;
             "my-link": LocalJSX.MyLink & JSXBase.HTMLAttributes<HTMLMyLinkElement>;
             "nav-app": LocalJSX.NavApp & JSXBase.HTMLAttributes<HTMLNavAppElement>;
+            "separate-bar": LocalJSX.SeparateBar & JSXBase.HTMLAttributes<HTMLSeparateBarElement>;
             "text-box": LocalJSX.TextBox & JSXBase.HTMLAttributes<HTMLTextBoxElement>;
         }
     }

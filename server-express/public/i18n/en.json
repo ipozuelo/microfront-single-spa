@@ -83,13 +83,43 @@
   "libraries":{
     "tittle":"Libraries and tecnologies",
     "init_text":"In the process of building this website, we have used a series of modern libraries and technologies that have allowed us to create an exceptional user experience and an attractive design. These tools and resources are essential to the operation and appearance of our platform.",
-    "taduccion_tittle":"i18n Translation libraries",
     "style_tittle":"Library Style Dictionary",
-    "react":{
-      "tittle":"React",
-      "text":"First you have to install the library in the react project. To do this, execute this command:",
-      "text_2":"Second, a file \"i18n.ts\" is created where certain configurations will be made in our internationalization system. To begin, we must extract the .JSON files where the translations divided by languages ​​are found on the express server that we have developed (explanation in the web section). For this reason, the react \"axios\" library has been used to extract the information from a url. Once we have the .JSON, we must create the i18n object by adding the files and the default language. The i18n object is then exported so that it can be used in the main react component.",
-      "text_3":"All that remains is to use the i18n object within the code using the \".t\" function and within the parentheses write in quotes the identification of the literal that you want to translate from the .JSON file. An example would be: \"i18n.t(\"nav.home\")\" which returns the name of \"Home\" or \"Inicio\" depending on the language."
+    "translate":{
+      "translate_tittle":"i18n Translation libraries",
+      "react":{
+        "tittle":"React",
+        "text":"First you have to install the library in the react project. To do this, execute this command:",
+        "text_2":"Second, a file \"i18n.ts\" is created where certain configurations will be made in our internationalization system. To begin, we must extract the .JSON files where the translations divided by languages ​​are found on the express server that we have developed (explanation in the web section). For this reason, the react \"axios\" library has been used to extract the information from a url. Once we have the .JSON, we must create the i18n object by adding the files and the default language. The i18n object is then exported so that it can be used in the main react component.",
+        "text_3":"All that remains is to use the i18n object within the code using the \".t\" function and within the parentheses write in quotes the identification of the literal that you want to translate from the .JSON file. An example would be: \"i18n.t(\"nav.home\")\" which returns the name of \"Home\" or \"Inicio\" depending on the language."
+      },
+      "vue":{
+        "tittle":"Vue",
+        "text_init":"First, you need to install the library in the Vue project. To do this, you run the following command:",
+        "text_2":"Second, you need to modify the 'main.js' file. You create an i18n object to set a default language, in this case, Spanish. Then, you create the 'loadLanguage' function that receives the language of the page. In this method, the 'axios' library is used to extract the .JSON documents where translations are stored, similar to in React. Once the data is extracted, it is added to the i18n object using the 'setLocaleMessage' method. Finally, the i18n object is added to the appOptions.",
+        "text_3":"Now, you just need to use the '$t()' function within the HTML, and inside the parentheses, provide the reference to the literal you want to translate from the .JSON file. For example:"
+      },
+      "angular":{
+        "tittle":"Angular",
+        "text_install":"First, you need to install the libraries in the Angular project. When using an older version of Angular, you need to install the compatible versions of the libraries. To do this, you run the following commands:",
+        "text_2":"Second, you need to modify the 'app.module.ts' file and add a function that looks for the .JSON files containing translations in a URL. For this purpose, the following function is created:",
+        "text_3":"Then, you need to add the 'TranslateModule' to the module's imports, including the function created earlier.",
+        "text_4":"Third, a service is created with a constructor, importing the object from 'translate/core,' and a default language is set, in this case, Spanish. Then, the methods to be used are created. The first method is for changing the language. This method is used when loading the page and checks via localStorage which language is defined. The second method is used to translate a literal directly from the component to store it in a variable. After creating the file, you need to define it in the 'app.module.ts' in the 'providers' section to use it throughout the Angular app.",
+        "text_5":"Finally, you can now translate any literal defined in the .JSON files. You just need to go to the HTML and add the 'translate' attribute to the HTML tag. For example:"
+      }
+     
+    },
+    "style_dicctionary":{
+      "tittle":"Style Dictionary library",
+      "text_init":"The Style Dictionary library allows us to use design tokens to define styles and use them on different platforms, such as HTML, CSS, JS, iOS, Android. It is available both as a CLI and as a separate module to expand its functionality.",
+      "text_2":"The most common problem is defining a design system, and every time you want to make a change, you have to modify them individually on all platforms. Style Dictionary solves this by keeping the defined styles from a single source, eliminating errors and improving workflow efficiency.",
+      "text_3":"In this case, a separate module has been created to generate multiple CSS files broken down into variable types. To do this, tokens are designed in Figma. Once they are created, they are linked to a repository to bring them into an application, from which a .JSON file with all the defined tokens is generated. Once you have the token file, you need to create the 'build.js' file to construct the CSS files. This would be a simple example of how to generate a CSS file in a specific location, filtering out color variables that do not belong to the dark mode of the design system.",
+      "text_4":"Now, this can be customized in any way to break down styles in a thousand different ways, adapting them to the application's needs. Another example is the customFormat that was designed to create CSS border variables. The issue here is that we receive an object from the tokens, and we need to take each element of the object and combine them into a single 'border' attribute, thus achieving a single 'border' property. They are also split depending on the border colors to differentiate between light mode and dark mode."
+    },
+    "storybook":{
+      "tittle":"StoryBook",
+      "text_init":"Storybook is an open-source development tool that allows developers to create and view user interface components in isolation, making their development, testing, and documentation easier. It is widely used in web application development and enables development teams to work on components independently before integrating them into the main application.",
+      "text_2":"Storybook provides an interactive user interface for viewing and testing components, making collaboration and early detection of visual and usability issues easier.",
+      "text_3":"In this project, it has been used to visualize the different web components developed in Stencil.js in a clearer way."
     }
   },
   "tools":{

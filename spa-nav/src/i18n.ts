@@ -27,6 +27,7 @@ export const useTranslationConfig = () => {
     })
     .catch((error) => {
       console.log(error);
+      console.log("Texto" + url)
     });
 }, []); 
 

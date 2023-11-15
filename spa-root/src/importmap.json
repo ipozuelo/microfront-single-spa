@@ -1,7 +1,7 @@
 {
     "imports": {
       "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-      "@spa-root/root-config": "//localhost:9000/spa-root-root-config.js",
+      "@spa-root/root-config": "//localhost:8000/spa-root-root-config.js",
       "@spa-nav/react":"http://localhost:8080/spa-nav-spa-nav.js",
       "@spa-home/angular":"http://localhost:9001/main.js",
       "@spa-web/angular":"http://localhost:9002/main.js",

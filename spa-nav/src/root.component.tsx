@@ -27,6 +27,8 @@ export default function Root() {
   const library = i18n.t("nav.library");
   const tools = i18n.t("nav.tools");
 
+  console.log(i18n.t("nav.home"))
+
   const itemList = [
     { text: home, icon: "--icon-house", link: "/home" },
     { text: about, icon: "--icon-info", link: "/about" },
