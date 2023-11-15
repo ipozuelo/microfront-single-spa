@@ -1,4 +1,6 @@
 @import url(http://localhost:3000/css/variables.css);
+@import url(http://localhost:3000/css/colors/variables-general-colors.css);
+@import url(http://localhost:3000/css/borders/variables-border.css);
 
 
 
@@ -17,7 +19,7 @@
   --code-fontFamily: var(--general-general-text-code);
   --code-color-background: var(--general-color-code);
   --code-color-text: var(--general-color-text-code);
-  --hover-color-text-a: var(--hover-link);
+  --hover-color-text-a: var(--nav-hover-link);
 
   --text-font-size:var(--general-general-text-size);
   --text-nav-font-size:var(--general-nav-font-size);

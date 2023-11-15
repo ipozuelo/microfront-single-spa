@@ -7,10 +7,9 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type         | Default     |
-| --------- | --------- | ----------- | ------------ | ----------- |
-| `onClick` | --        |             | `() => void` | `undefined` |
-| `text`    | `text`    |             | `string`     | `"click"`   |
+| Property | Attribute | Description | Type     | Default   |
+| -------- | --------- | ----------- | -------- | --------- |
+| `text`   | `text`    |             | `string` | `"click"` |
 
 
 ----------------------------------------------

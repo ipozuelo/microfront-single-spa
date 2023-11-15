@@ -1,10 +1,10 @@
 /**
  * Do not edit directly
- * Generated on Wed, 15 Nov 2023 13:03:33 GMT
+ * Generated on Wed, 15 Nov 2023 15:03:31 GMT
  */
 
 :root {
-  --general-nav-font-size: 20px;
+  --general-nav-font-size: 1rem;
   --general-nav-btn-border-radius: 5px;
   --general-general-text-font: sans-serif;
   --general-general-h1-size: 2rem;

@@ -7,13 +7,13 @@
 
 ## Properties
 
-| Property   | Attribute   | Description | Type      | Default                                                                                                             |
-| ---------- | ----------- | ----------- | --------- | ------------------------------------------------------------------------------------------------------------------- |
-| `itemList` | `item-list` |             | `string`  | `""`                                                                                                                |
-| `languaje` | `languaje`  |             | `boolean` | `false`                                                                                                             |
-| `list`     | `list`      |             | `string`  | ``[{ "text": "home", "icon": "--icon-house", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"}]`` |
-| `theme`    | `theme`     |             | `boolean` | `false`                                                                                                             |
-| `tittle`   | `tittle`    |             | `string`  | `''`                                                                                                                |
+| Property   | Attribute   | Description | Type      | Default                                                                                                                                                                                                                                                                                  |
+| ---------- | ----------- | ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `itemList` | `item-list` |             | `string`  | `""`                                                                                                                                                                                                                                                                                     |
+| `languaje` | `languaje`  |             | `boolean` | `false`                                                                                                                                                                                                                                                                                  |
+| `list`     | `list`      |             | `string`  | ``[{ "text": "home", "icon": "--icon-house", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"}]`` |
+| `theme`    | `theme`     |             | `boolean` | `false`                                                                                                                                                                                                                                                                                  |
+| `tittle`   | `tittle`    |             | `string`  | `''`                                                                                                                                                                                                                                                                                     |
 
 
 ## Dependencies

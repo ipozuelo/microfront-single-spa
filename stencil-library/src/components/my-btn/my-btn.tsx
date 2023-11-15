@@ -16,6 +16,7 @@ export class MyBtn {
   render() {
     return (
       <Host>
+        <button>{this.text}</button>
       </Host>
     );
   }
