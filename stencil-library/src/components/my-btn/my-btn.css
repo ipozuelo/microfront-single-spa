@@ -2,7 +2,7 @@
 
 :host {
   display: block;
-  font-family: var(--text-fontFamily);
+
 }
 
 button{
@@ -10,5 +10,6 @@ button{
   padding: 5px 10px;
   background-color:var(--btn-color);
   border: none;
-  color: #272343;
+  color: var(--text-color-btn);
+  font-family: var(--text-fontFamily);
 }

@@ -31,6 +31,7 @@ export namespace Components {
         "itemList": string;
         "languaje": boolean;
         "list": string;
+        "logo_img": string;
         "theme": boolean;
         "tittle": string;
     }
@@ -133,6 +134,7 @@ declare namespace LocalJSX {
         "itemList"?: string;
         "languaje"?: boolean;
         "list"?: string;
+        "logo_img"?: string;
         "theme"?: boolean;
         "tittle"?: string;
     }

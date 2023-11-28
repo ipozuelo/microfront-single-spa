@@ -1,9 +1,11 @@
 :host {
   display: block;
-  font-family: var(--text-fontFamily);
 }
 
 button{
   background-color: var(--nav-languaje-btn);
   border-radius: var(--border-btn-radius);
+  color: var(--text-color-btn);
+  font-family: var(--text-fontFamily);
+  padding: 3px 8px 3px 8px;
 }

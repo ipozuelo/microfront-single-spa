@@ -20,6 +20,7 @@
   --code-color-background: var(--general-color-code);
   --code-color-text: var(--general-color-text-code);
   --hover-color-text-a: var(--nav-hover-link);
+  --text-color-btn: var(--general-color-btn-text);
 
   --text-font-size:var(--general-general-text-size);
   --text-nav-font-size:var(--general-nav-font-size);

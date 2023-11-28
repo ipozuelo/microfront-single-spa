@@ -1,6 +1,9 @@
-
 :host {
   font-family: var(--text-fontFamily);
+}
+
+.img_logo {
+  max-width: 150px;
 }
 
 .sidebar {
@@ -10,8 +13,6 @@
   left: 0;
   height: 100%;
   width: 15%;
-  border-top: var(--border-nav);
-  border-right: var(--border-nav);
   padding: 6px 14px;
   background-color: var(--nav-color);
   border-radius: 0 10px 10px 0px;
@@ -49,7 +50,7 @@
   display: flex;
   align-items: flex-end;
   margin-bottom: 40px;
-  justify-content: space-evenly
+  justify-content: space-evenly;
 }
 
 light-dark-mode {
@@ -90,7 +91,7 @@ light-dark-mode {
     display: flex;
     align-items: flex-end;
     margin-bottom: 40px;
-    justify-content: space-evenly
+    justify-content: space-evenly;
   }
 
   light-dark-mode {

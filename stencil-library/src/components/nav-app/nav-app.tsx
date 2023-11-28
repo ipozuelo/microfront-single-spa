@@ -10,7 +10,7 @@ import 'https://kit.fontawesome.com/94e65f6987.js'
 export class NavApp {
   @Prop() itemList: string="";
   @Prop() list: string = `[{ "text": "home", "icon": "--icon-house", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"}]`
-
+  @Prop() logo_img:string = ''
   @Prop() tittle: string = '';
 
   @Prop() theme: boolean = false;
@@ -30,7 +30,7 @@ export class NavApp {
         <nav class="sidebar">
           <div class="logo_content">
             <div class="logo">
-              <span class="logo_name">{this.tittle}</span>
+              <img class='img_logo' src='http://localhost:3000/images/spa-nav/logo-nttdata.png' alt=''></img>
               {this.theme ? (
         <div class="theme-button">
           <light-dark-mode></light-dark-mode>
