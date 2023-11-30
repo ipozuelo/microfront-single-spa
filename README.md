@@ -93,7 +93,7 @@ npm run serve:standalone
 ```
 
 ### [spa-team](./spa-team)
-Microfrontend de Vue encargado de desarrollar la pantalla donde se encuentra la información sobre cosas útiles para el equipo de Front.
+Microfrontend de React encargado de desarrollar la pantalla donde se encuentra la información sobre cosas útiles para el equipo de Front.
 
 ```bash
 cd spa-team
