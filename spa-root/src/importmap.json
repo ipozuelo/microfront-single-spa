@@ -7,6 +7,7 @@
       "@spa-web/angular":"http://localhost:9002/main.js",
       "@spa-about/vue":"http://localhost:8081/js/app.js",
       "@spa-tools/angular":"http://localhost:9003/main.js",
-      "@spa-library/angular":"http://localhost:9004/main.js"
+      "@spa-library/angular":"http://localhost:9004/main.js",
+      "@spa-team/react":"http://localhost:8082/spa-team-spa-team.js"
     }
   }

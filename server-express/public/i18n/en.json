@@ -1,15 +1,23 @@
 {
   "nav": {
     "home": "Home",
-    "information": "Frontend Team",
+    "about": "About me",
     "team": "Team",
     "web": "Web",
     "incidents": "Incidents",
     "library": "Library",
     "tools": "Tools"
   },
+  "team":{
+    "tittle":"Frontend Team"
+
+  },
   "about": {
-    "tittle": "About us"
+    "tittle": "About me",
+    "init_text":"Hello everyone! I'm Israel, and I'm thrilled to be part of the front-end development team. For me, this is more than just a job; it's an exciting opportunity to dive into the world of web development and learn something new every day. My motivation is high, and I'm ready to tackle challenges and grow with this amazing team. I'm eager to contribute and learn together on this exciting journey!",
+    "contact":"If you have any questions regarding the website, you can contact me via Teams or email: ",
+    "name":"Full name: Israel Pozuelo Martín.",
+    "email":"Email: ipozuelo@emeal.nttdata.com"
   },
   "home": {
     "tittle": "Welcome to our website created with Single SPA Microfrontends technology!",

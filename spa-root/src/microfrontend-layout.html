@@ -18,8 +18,6 @@
   -->
 
   <main>
-
-
     <route default>
       <application name="@spa-nav/react"></application>
       <application name="@spa-home/angular"></application>
@@ -35,7 +33,6 @@
       <application name="@spa-about/vue"></application>
     </route>
 
-    
     <route path="web">
       <application name="@spa-nav/react"></application>
       <application name="@spa-web/angular"></application>
@@ -51,7 +48,9 @@
       <application name="@spa-library/angular"></application>
     </route>
 
-
-
+    <route path="team">
+      <application name="@spa-nav/react"></application>
+      <application name="@spa-team/react"></application>
+    </route>
   </main>
 </single-spa-router>

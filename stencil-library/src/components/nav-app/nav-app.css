@@ -4,21 +4,25 @@
 
 .img_logo {
   max-width: 150px;
+  height: 40px;
 }
 
-.sidebar {
-  display: block;
+.content-nav {
+  display: grid;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  position: fixed;
+  min-height: 100vh;
   width: 15%;
-  padding: 6px 14px;
   background-color: var(--nav-color);
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 1fr 50px;
   border-radius: 0 10px 10px 0px;
+  padding: 6px 14px;
 }
 
-.sidebar .logo_content .logo {
+.content-nav .logo_content .logo {
   color: var(--logo-color);
   display: flex;
   height: 50px;
@@ -26,21 +30,12 @@
   align-items: center;
 }
 
-.sidebar .logo_content .logo i {
-  margin-right: 10px;
-}
-
-.sidebar .logo_content .logo .logo_name {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.sidebar ul {
+.content-nav ul {
   margin-top: 30px;
   list-style: none;
   padding: 10px;
 }
-.sidebar ul li-nav:hover {
+.content-nav ul li-nav:hover {
   background-color: var(--nav-hover-li-a);
   color: var(--nav-hover-li);
   border-radius: var(--border-btn-radius);
@@ -51,50 +46,4 @@
   align-items: flex-end;
   margin-bottom: 40px;
   justify-content: space-evenly;
-}
-
-light-dark-mode {
-  margin-left: 10px;
-}
-
-@media only screen and (max-width: 768px) {
-  .sidebar {
-    width: 25%;
-    border: var(--border-nav);
-    border-top: var(--border-nav);
-    border-right: var(--border-nav);
-    background-color: var(--nav-color);
-    border-radius: 0 10px 10px 0px;
-  }
-
-  .sidebar .logo_content .logo {
-    color: var(--logo-color);
-  }
-
-  .sidebar .logo_content .logo .logo_name {
-    font-size: 20px;
-    font-weight: 400;
-  }
-
-  .sidebar ul {
-    margin-top: 30px;
-    list-style: none;
-    padding: 10px;
-  }
-  .sidebar ul li-nav:hover {
-    background-color: var(--nav-hover-li-a);
-    color: var(--nav-hover-li);
-    border-radius: var(--border-btn-radius);
-  }
-
-  .container-btn {
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 40px;
-    justify-content: space-evenly;
-  }
-
-  light-dark-mode {
-    margin-left: 10px;
-  }
 }

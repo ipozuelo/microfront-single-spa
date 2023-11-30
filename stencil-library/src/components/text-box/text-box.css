@@ -8,7 +8,7 @@
   justify-content: center;
   max-width: 100%;
   max-height: 100%;
-  background-color: var(--nav-color);
+  background-color: var(--code-color-background);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
   padding: 20px;

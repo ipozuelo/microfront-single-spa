@@ -1,16 +1,24 @@
 {
   "nav": {
     "home": "Inicio",
-    "information": "Equipo Frontend",
+    "about": "Sobre mí",
     "team": "Equipo",
     "web": "Web",
     "incidents": "Incidencias",
     "library": "Librerías",
     "tools": "Herramientas"
   },
+  "team":{
+    "tittle":"Equipo Frontend"
+
+  },
   "about": {
-    "tittle": "Información útil",
-    "init_text": "En este apartado vamos a dar información que puede ser útil en un futuro"
+    "tittle": "Información Sobre mí",
+    "init_text": "¡Hola a todos! Soy Israel y estoy emocionado de formar parte del equipo de desarrollo front. Para mí, esto es más que un trabajo; es una oportunidad emocionante para sumergirme en el mundo del desarrollo web y aprender algo nuevo cada día. Mi motivación es alta, y estoy listo para enfrentar desafíos y crecer en este increíble equipo. ¡Estoy ansioso por contribuir y aprender juntos en esta emocionante travesía!",
+    "contact":"Si tenéis alguna duda respecto a la web podéis contactar conmigo a través de teams o por correo: ",
+    "name":"Nombre completo: Israel Pozuelo Martín.",
+    "email":"Email: ipozuelo@emeal.nttdata.com"
+    
   },
   "home": {
     "tittle": "¡Bienvenido a nuestro sitio web creado con la tecnología Single-SPA Microfrontends!",

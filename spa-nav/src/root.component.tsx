@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useTranslationConfig } from "./i18n";
 
@@ -22,18 +21,19 @@ export default function Root() {
   };
 
   const home = i18n.t("nav.home");
-  const about = i18n.t("nav.information");
+  const about = i18n.t("nav.about");
   const web = i18n.t("nav.web");
   const library = i18n.t("nav.library");
   const tools = i18n.t("nav.tools");
-
+  const team = i18n.t("nav.team");
 
   const itemList = [
     { text: home, icon: "--icon-house", link: "/home" },
-    { text: about, icon: "--icon-info", link: "/about" },
+    { text: team, icon: "--icon-info", link: "/team" },
     { text: web, icon: "--icon-code", link: "/web" },
     { text: library, icon: "--icon-library", link: "/library" },
     { text: tools, icon: "--icon-tools", link: "/tools" },
+    { text: about, icon: "--icon-info", link: "/about" },
   ];
 
   const objString: string = JSON.stringify(itemList);

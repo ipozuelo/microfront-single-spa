@@ -1,6 +1,6 @@
 import { Component, Host, Prop, h, State } from '@stencil/core';
 
-import 'https://kit.fontawesome.com/94e65f6987.js'
+import 'https://kit.fontawesome.com/94e65f6987.js';
 
 @Component({
   tag: 'nav-app',
@@ -8,34 +8,35 @@ import 'https://kit.fontawesome.com/94e65f6987.js'
   shadow: true,
 })
 export class NavApp {
-  @Prop() itemList: string="";
-  @Prop() list: string = `[{ "text": "home", "icon": "--icon-house", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"}]`
-  @Prop() logo_img:string = ''
+  @Prop() itemList: string = '';
+  @Prop()
+  list: string = `[{ "text": "home", "icon": "--icon-house", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"},{ "text": "About", "icon": "--icon-info", "link": "/"}]`;
+  @Prop() logo_img: string = '';
   @Prop() tittle: string = '';
 
   @Prop() theme: boolean = false;
   @Prop() languaje: boolean = false;
 
-  @State() obj:any;
+  @State() obj: any;
 
-  componentWillRender(){
-    this.obj = JSON.parse(this.list)
+  componentWillRender() {
+    this.obj = JSON.parse(this.list);
   }
-  
 
   render() {
     return (
-     
       <Host>
-        <nav class="sidebar">
+        <nav class="content-nav">
           <div class="logo_content">
             <div class="logo">
-              <img class='img_logo' src='http://localhost:3000/images/spa-nav/logo-nttdata.png' alt=''></img>
+              <a href="/">
+                <img class="img_logo" src="http://localhost:3000/images/spa-nav/logo-nttdata.png" alt=""></img>
+              </a>
               {this.theme ? (
-        <div class="theme-button">
-          <light-dark-mode></light-dark-mode>
-        </div>
-      ) : null}
+                <div class="theme-button">
+                  <light-dark-mode></light-dark-mode>
+                </div>
+              ) : null}
             </div>
           </div>
 
