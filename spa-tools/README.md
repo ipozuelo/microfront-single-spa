@@ -1,27 +1,67 @@
-# SpaTools
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+# Spa-Angular
+Para crear un microfrontend con el framework de Angular, hay que ejecutar el siguiente comando:
 
-## Development server
+```bash
+create-single-spa --framework angular
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Esto  nos generará un proyecto angular, pero antes de ejecutar, hay que hacer una serie de moficiaciones al proyecto.
 
-## Code scaffolding
+Primero hay que modificar el archivo main.single-soa.ts, ya que esté nos estará dando error con la importación de enviroment y con eliminarla valdría. Se tendría que quedar el archivo tal que así: 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+import { enableProdMode, NgZone } from '@angular/core';
 
-## Build
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { Router, NavigationStart } from '@angular/router';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+import { singleSpaAngular, getSingleSpaExtraProviders } from 'single-spa-angular';
 
-## Running unit tests
+import { AppModule } from './app/app.module';
+import { singleSpaPropsSubject } from './single-spa/single-spa-props';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+const lifecycles = singleSpaAngular({
+  bootstrapFunction: singleSpaProps => {
+    singleSpaPropsSubject.next(singleSpaProps);
+    return platformBrowserDynamic(getSingleSpaExtraProviders()).bootstrapModule(AppModule);
+  },
+  template: '<app-root />',
+  Router,
+  NavigationStart,
+  NgZone,
+});
 
-## Running end-to-end tests
+export const bootstrap = lifecycles.bootstrap;
+export const mount = lifecycles.mount;
+export const unmount = lifecycles.unmount;
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Después hay que modificar el archivo app-routing.module.ts para añadir el módulo que se genera por defecto de empty-route. El archivo tiene que quedar tal que así:
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { EmptyRouteComponent } from './empty-route/empty-route.component';
+import { APP_BASE_HREF } from '@angular/common';
+
+const routes: Routes = [
+  {path:'**', component: EmptyRouteComponent}
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+  providers: [{provide: APP_BASE_HREF, useValue:'/'}]
+})
+export class AppRoutingModule { }
+
+```
+
+Con esto ya estarían las modificaciones, ahora antes de ejecutar hay que instalar la carpeta node_modules y ya ejecutar. Cabe destacar que el último nombre del comando para ejecutar depende del nombre del pryecto microfrontend.
+
+```bash
+npm i
+npm run serve:single-spa:spa-tools
+```
