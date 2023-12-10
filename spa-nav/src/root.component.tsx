@@ -29,7 +29,7 @@ export default function Root() {
 
   const itemList = [
     { text: home, icon: "--icon-house", link: "/home" },
-    { text: team, icon: "--icon-info", link: "/team" },
+    //{ text: team, icon: "--icon-info", link: "/team" },
     { text: web, icon: "--icon-code", link: "/web" },
     { text: library, icon: "--icon-library", link: "/library" },
     { text: tools, icon: "--icon-tools", link: "/tools" },
