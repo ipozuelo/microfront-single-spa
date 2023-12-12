@@ -49,6 +49,7 @@ export default function Root() {
       languaje={true}
       itemList={objString}
       list={objString}
+      logo_img='http://localhost:3000/images/spa-nav/logo-nttdata.png'
     ></nav-app>
   );
 }

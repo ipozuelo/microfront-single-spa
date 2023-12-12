@@ -30,7 +30,7 @@ export class NavApp {
           <div class="logo_content">
             <div class="logo">
               <a href="/">
-                <img class="img_logo" src="http://localhost:3000/images/spa-nav/logo-nttdata.png" alt=""></img>
+                <img class="img_logo" src={this.logo_img} alt=""></img>
               </a>
               {this.theme ? (
                 <div class="theme-button">
