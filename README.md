@@ -1,15 +1,6 @@
 
 # test 1 
-<<<<<<< HEAD
 # test 2
-# test 3 
-# test 4
-# test 5
-# test 7
-# test 9
-
-=======
->>>>>>> main
 
 # Single-SPA Microfrontends
 Esto es una aplicación basada en Microfrontends donde se utiliza el framework Single-SPA contando con varios microfrontends desarrollados en Angular, React y Vue. 
